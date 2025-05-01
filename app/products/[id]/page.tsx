@@ -185,3 +185,9 @@ export default function ProductPage() {
     </div>
   )
 }
+export async function generateStaticParams() {
+  // Replace this with actual data source or keep using allProducts
+  return allProducts.map((product) => ({
+    id: product.id,
+  }))
+}
