@@ -9,8 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/Nutrimaxiboost-ss', 
-  assetPrefix: '/Nutrimaxiboost-ss/',
 }
 
 export default nextConfig
