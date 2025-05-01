@@ -34,7 +34,7 @@ export function SiteHeader() {
           <SheetContent side="left">
             <nav className="grid gap-6 text-lg font-medium">
               <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
-                <Image src="/images/logo.png" alt="NutriMaxi Boost Logo" width={150} height={60} />
+                <Image src="public/images/logo.png" alt="NutriMaxi Boost Logo" width={150} height={60} />
               </Link>
               <Link href="/" className="hover:text-foreground/80">
                 Inicio
@@ -65,7 +65,7 @@ export function SiteHeader() {
         </Sheet>
 
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/images/logo.png" alt="NutriMaxi Boost Logo" width={150} height={60} />
+          <Image src="public/images/logo.png" alt="NutriMaxi Boost Logo" width={150} height={60} />
         </Link>
 
         <div className="hidden md:flex">

@@ -109,7 +109,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center border-t mt-8 pt-8">
           <div className="mb-4 md:mb-0">
-            <Image src="/images/logo.png" alt="NutriMaxi Boost Logo" width={150} height={60} />
+            <Image src="public/images/logo.png" alt="NutriMaxi Boost Logo" width={150} height={60} />
           </div>
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
             © {new Date().getFullYear()} NutriMaxi Boost. Todos los derechos reservados.
