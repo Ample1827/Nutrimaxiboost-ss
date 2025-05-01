@@ -9,7 +9,18 @@ import { useCart } from "@/hooks/use-cart"
 import { Minus, Plus, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 
-export default function ProductClient({ product }: { product: any }) {
+// Define the product type
+interface Product {
+  name: string
+  description: string
+  longDescription?: string
+  price: number
+  originalPrice?: number
+  image?: string
+  features?: string[]
+}
+
+export default function ProductClient({ product }: { product: Product }) {
   const { toast } = useToast()
   const { addToCart } = useCart()
   const [quantity, setQuantity] = useState(1)
@@ -30,19 +41,19 @@ export default function ProductClient({ product }: { product: any }) {
           <div className="bg-muted rounded-lg overflow-hidden">
             <Image
               src={product.image || "/placeholder.svg?height=600&width=600"}
-              alt={product.name}
+              alt={product.name || "Producto sin nombre"}
               width={600}
               height={600}
               className="object-cover w-full aspect-square"
             />
           </div>
-          {/* Small thumbnails (can be updated to real images later) */}
+          {/* Small thumbnails */}
           <div className="grid grid-cols-3 gap-2">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="bg-muted rounded-lg overflow-hidden">
                 <Image
                   src={product.image || "/placeholder.svg?height=200&width=200"}
-                  alt={product.name}
+                  alt={`${product.name || "Producto"} - Miniatura ${i + 1}`}
                   width={200}
                   height={200}
                   className="object-cover aspect-square"
@@ -66,7 +77,7 @@ export default function ProductClient({ product }: { product: any }) {
             <p className="text-muted-foreground">{product.description}</p>
             {product.features && (
               <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                {product.features.map((feature: string, i: number) => (
+                {product.features.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
