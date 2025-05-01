@@ -1,18 +1,15 @@
-import ProductPageClient from "./ProductPageClient"
+import { notFound } from "next/navigation"
 import { allProducts } from "@/lib/products"
+import ProductClient from "./ProductClient"
 
-export async function generateStaticParams() {
-  return allProducts.map((product) => ({
-    id: product.id,
-  }))
+export function generateStaticParams() {
+  return allProducts.map((product) => ({ id: product.id }))
 }
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = allProducts.find((p) => p.id === params.id)
 
-  if (!product) {
-    return <div className="container py-12 text-center">Producto no encontrado</div>
-  }
+  if (!product) return notFound()
 
-  return <ProductPageClient product={product} />
+  return <ProductClient product={product} />
 }

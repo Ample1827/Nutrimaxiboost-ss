@@ -9,17 +9,13 @@ import { useCart } from "@/hooks/use-cart"
 import { Minus, Plus, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 
-export default function ProductPageClient({ product }) {
+export default function ProductClient({ product }: { product: any }) {
   const { toast } = useToast()
   const { addToCart } = useCart()
   const [quantity, setQuantity] = useState(1)
 
   const handleAddToCart = () => {
-    addToCart({
-      ...product,
-      quantity,
-    })
-
+    addToCart({ ...product, quantity })
     toast({
       title: "Añadido al carrito",
       description: `${product.name} (${quantity}) ha sido añadido a tu carrito.`,
@@ -29,6 +25,7 @@ export default function ProductPageClient({ product }) {
   return (
     <div className="container px-4 md:px-6 py-8">
       <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start">
+        {/* Images */}
         <div className="flex flex-col space-y-4">
           <div className="bg-muted rounded-lg overflow-hidden">
             <Image
@@ -39,11 +36,12 @@ export default function ProductPageClient({ product }) {
               className="object-cover w-full aspect-square"
             />
           </div>
+          {/* Small thumbnails (can be updated to real images later) */}
           <div className="grid grid-cols-3 gap-2">
-            {[0, 1, 2].map((_, i) => (
+            {[...Array(3)].map((_, i) => (
               <div key={i} className="bg-muted rounded-lg overflow-hidden">
                 <Image
-                  src={i === 0 ? product.image || "/placeholder.svg" : "/placeholder.svg"}
+                  src={product.image || "/placeholder.svg?height=200&width=200"}
                   alt={product.name}
                   width={200}
                   height={200}
@@ -54,6 +52,7 @@ export default function ProductPageClient({ product }) {
           </div>
         </div>
 
+        {/* Details */}
         <div className="flex flex-col space-y-6">
           <div>
             <h1 className="text-3xl font-bold">{product.name}</h1>
@@ -67,13 +66,14 @@ export default function ProductPageClient({ product }) {
             <p className="text-muted-foreground">{product.description}</p>
             {product.features && (
               <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                {product.features.map((feature, i) => (
+                {product.features.map((feature: string, i: number) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
             )}
           </div>
 
+          {/* Quantity selector */}
           <div className="flex items-center space-x-2">
             <Button variant="outline" size="icon" onClick={() => setQuantity(Math.max(1, quantity - 1))}>
               <Minus className="h-4 w-4" />
@@ -84,72 +84,67 @@ export default function ProductPageClient({ product }) {
             </Button>
           </div>
 
+          {/* Add to Cart */}
           <Button size="lg" onClick={handleAddToCart}>
             <ShoppingCart className="mr-2 h-5 w-5" />
             Añadir al Carrito
           </Button>
 
+          {/* Tabs: Description, Specs, Reviews */}
           <Tabs defaultValue="description">
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="description">Descripción</TabsTrigger>
               <TabsTrigger value="specifications">Especificaciones</TabsTrigger>
               <TabsTrigger value="reviews">Reseñas</TabsTrigger>
             </TabsList>
+
             <TabsContent value="description" className="space-y-4">
-              <div className="space-y-2">
-                <h3 className="text-lg font-medium">Detalles del Producto</h3>
-                <p className="text-muted-foreground">{product.longDescription || product.description}</p>
-              </div>
+              <h3 className="text-lg font-medium">Detalles del Producto</h3>
+              <p className="text-muted-foreground">{product.longDescription || product.description}</p>
             </TabsContent>
-            <TabsContent value="specifications" className="space-y-4">
+
+            <TabsContent value="specifications">
               <Card>
                 <CardHeader>
                   <CardTitle>Especificaciones Técnicas</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="text-muted-foreground">Material</div>
+                  <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                    <div>Material</div>
                     <div>Mezcla premium</div>
-                    <div className="text-muted-foreground">Peso</div>
+                    <div>Peso</div>
                     <div>0.5 kg</div>
-                    <div className="text-muted-foreground">Dimensiones</div>
+                    <div>Dimensiones</div>
                     <div>10 x 5 x 2 cm</div>
-                    <div className="text-muted-foreground">Uso Recomendado</div>
+                    <div>Uso Recomendado</div>
                     <div>Diario</div>
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
-            <TabsContent value="reviews" className="space-y-4">
+
+            <TabsContent value="reviews">
               <Card>
                 <CardHeader>
                   <CardTitle>Reseñas de Clientes</CardTitle>
                   <CardDescription>4.8 de 5 estrellas (24 reseñas)</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 text-sm text-muted-foreground">
                   <div className="border-b pb-4">
-                    <div className="flex justify-between">
-                      <div className="font-medium">Juan D.</div>
-                      <div className="text-muted-foreground">★★★★★</div>
+                    <div className="flex justify-between font-medium">
+                      <span>Juan D.</span><span>★★★★★</span>
                     </div>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      ¡Gran producto! Exactamente lo que necesitaba para mi rutina de entrenamiento.
-                    </p>
+                    <p>¡Gran producto! Exactamente lo que necesitaba para mi rutina de entrenamiento.</p>
                   </div>
                   <div className="border-b pb-4">
-                    <div className="flex justify-between">
-                      <div className="font-medium">Sara M.</div>
-                      <div className="text-muted-foreground">★★★★☆</div>
+                    <div className="flex justify-between font-medium">
+                      <span>Sara M.</span><span>★★★★☆</span>
                     </div>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Buena calidad pero el envío tardó más de lo esperado.
-                    </p>
+                    <p>Buena calidad pero el envío tardó más de lo esperado.</p>
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" size="sm">
-                    Leer Todas las Reseñas
-                  </Button>
+                  <Button variant="outline" size="sm">Leer Todas las Reseñas</Button>
                 </CardFooter>
               </Card>
             </TabsContent>
