@@ -9,7 +9,7 @@ export const featuredProducts: Product[] = [
       "Nuestra Proteína Whey Premium proviene de vacas alimentadas con pasto y proporciona 24g de proteína por porción con mínimos carbohidratos y grasas. Es perfecta para la recuperación post-entrenamiento, ayudando a reconstruir el tejido muscular y apoyar tus objetivos de fitness. Disponible en múltiples sabores deliciosos.",
     price: 999.99,
     originalPrice: 1199.99,
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/whey-protein-1.webp?height=400&width=400",
     category: "Proteínas",
     badge: "Más Vendido",
     rating: 4.8,
