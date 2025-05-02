@@ -1,44 +1,23 @@
-import { getProductById, getAllProducts } from "@/lib/products";
+import type { Metadata } from "next";
+import { getProductById } from "@/lib/products";
 import { notFound } from "next/navigation";
 import StoreLayout from "@/components/store-layout";
 import ProductDetail from "@/components/product-detail";
 
-// Static paths
+// 1. Generate static paths
 export async function generateStaticParams() {
-  return [
-    { id: "1" },
-    { id: "2" },
-    { id: "3" },
-    { id: "4" },
-    { id: "5" },
-    { id: "6" },
-    { id: "7" },
-    { id: "8" },
-    { id: "9" },
-    { id: "10" },
-    { id: "11" },
-    { id: "12" },
-    { id: "13" },
-    { id: "14" },
-    { id: "15" },
-    { id: "16" },
-    { id: "17" },
-    { id: "18" },
-    { id: "19" },
-    { id: "20" },
-    { id: "21" },
-    { id: "22" },
-    { id: "23" },
-    { id: "24" },
-    { id: "25" },
-  ];
+  return Array.from({ length: 25 }, (_, i) => ({
+    id: (i + 1).toString(),
+  }));
 }
 
 
-// Metadata with awaited params
-import type { Metadata } from "next";
-
-export function generateMetadata({ params }: { params: { id: string } }): Metadata {
+// 2. Metadata — must be synchronous unless fetching
+export function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Metadata {
   return {
     title: `Product ${params.id}`,
     description: `Details for product ${params.id}`,
@@ -46,13 +25,13 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
 }
 
 
-// Page component with awaited params
+// 3. Page component
 export default async function ProductDetailPage({
   params,
 }: {
   params: { id: string };
 }) {
-  const product = await getProductById(params.id); // This is OK
+  const product = await getProductById(params.id);
 
   if (!product) {
     notFound();
@@ -64,4 +43,3 @@ export default async function ProductDetailPage({
     </StoreLayout>
   );
 }
-
