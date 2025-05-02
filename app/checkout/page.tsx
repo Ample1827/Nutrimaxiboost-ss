@@ -1,11 +1,10 @@
 "use client"
-
+import StoreLayout from "@/components/store-layout";
 import type React from "react"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import StoreLayout from "@/components/store-layout"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -401,4 +400,13 @@ export default function CheckoutPage() {
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
                     <span className="text-store-dark-green">MXN ${(totalPrice + 150).toFixed(2)}</span>
-                  </div\
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </StoreLayout>
+  )
+}
