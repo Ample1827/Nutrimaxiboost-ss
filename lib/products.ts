@@ -5,7 +5,7 @@ export const productDatabase = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image:{src: `${prefix}/images/whey.jpeg`}, // Updated path
+    image: `${prefix}/images/whey.jpeg`, // Updated path
     category: "featured",
     description:
       "Experience crystal-clear sound with our Premium Headphones. Featuring active noise cancellation, comfortable ear cups, and a long-lasting battery, these headphones are perfect for music lovers and professionals alike.",

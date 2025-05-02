@@ -65,12 +65,7 @@ const featuredProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: {
-      src: `${prefix}/images/whey.jpeg`,
-      alt: "Premium Headphones",
-      width: 500,
-      height: 500
-    },
+    image: `${prefix}/images/whey.jpeg`,
     category: "featured",
   },
   {
