@@ -1,45 +1,41 @@
-import type { Metadata } from "next";
-import { getProductById } from "@/lib/products";
-import { notFound } from "next/navigation";
-import StoreLayout from "@/components/store-layout";
-import ProductDetail from "@/components/product-detail";
+import { getProductById, getAllProducts } from 'lib/api'; // Example import for fetching data
+import { notFound } from 'next/navigation';
 
-// 1. Generate static paths
-export async function generateStaticParams() {
-  return Array.from({ length: 25 }, (_, i) => ({
-    id: (i + 1).toString(),
-  }));
-}
-
-
-// 2. Metadata — must be synchronous unless fetching
-export function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Metadata {
-  return {
-    title: `Product ${params.id}`,
-    description: `Details for product ${params.id}`,
-  };
-}
-
-
-// 3. Page component
-export default async function ProductDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function ProductDetailPage({ params }: { params: { id: string } }) {
+  // Safely get the product by ID
   const product = await getProductById(params.id);
 
   if (!product) {
-    notFound();
+    notFound(); // Redirects to the 404 page if the product is not found
   }
 
   return (
-    <StoreLayout>
-      <ProductDetail product={product} />
-    </StoreLayout>
+    <div>
+      <h1>{product.name}</h1>
+      <p>{product.description}</p>
+      {/* Other product details here */}
+    </div>
   );
+}
+
+// Metadata generation for static pages
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const product = await getProductById(params.id);
+  if (!product) return {};
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
+
+// Static parameters generation for pre-rendering pages
+export async function generateStaticParams() {
+  // Fetch all products to generate paths
+  const products = await getAllProducts();
+
+  // Return an array of paths to be pre-rendered
+  return products.map((product) => ({
+    id: product.id.toString(),
+  }));
 }
