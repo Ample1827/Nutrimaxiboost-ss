@@ -2,7 +2,6 @@ import { getProductById, getAllProducts } from "@/lib/products";
 import { notFound } from "next/navigation";
 import StoreLayout from "@/components/store-layout";
 import ProductDetail from "@/components/product-detail";
-import type { Metadata } from "next";
 
 // Static paths
 export async function generateStaticParams() {
@@ -37,9 +36,9 @@ export async function generateStaticParams() {
 
 
 // Metadata with awaited params
-export async function generateMetadata(props: { params: { id: string } }) {
-  const { params } = props;
+import type { Metadata } from "next";
 
+export function generateMetadata({ params }: { params: { id: string } }): Metadata {
   return {
     title: `Product ${params.id}`,
     description: `Details for product ${params.id}`,
