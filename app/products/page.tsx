@@ -1,14 +1,16 @@
 import StoreLayout from "@/components/store-layout"
 import ProductGrid from "@/components/product-grid"
+import { prefix } from "@/lib/prefix"; // adjust path as needed
+
 
 // All products combined
 const allProducts = [
   // Featured Products
   {
     id: "1",
-    name: "Premium Headphones",
-    price: 2499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Premium Proteína Gold Standard 100% Whey",
+    price: 1781.62,
+    image: `${prefix}/images/whey.jpeg`,
     category: "featured",
   },
   {

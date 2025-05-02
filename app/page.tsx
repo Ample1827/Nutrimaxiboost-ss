@@ -12,8 +12,8 @@ import { prefix } from "@/lib/prefix"; // adjust path as needed
 const topSellingProducts = [
   {
     id: "1",
-    name: "Premium Headphones",
-    price: 2499.99,
+    name: "Proteína Gold Standard 100% Whey",
+    price: 1781.62 ,
     image: `${prefix}/images/whey.jpeg`,
     category: "featured",
     rating: 4.8,
@@ -61,9 +61,9 @@ const topSellingProducts = [
 const featuredProducts = [
   {
     id: "1",
-    name: "Premium Headphones",
-    price: 2499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Premium Proteína Gold Standard 100% Whey",
+    price: 1781.62,
+    image: `${prefix}/images/whey.jpeg`,
     category: "featured",
   },
   {

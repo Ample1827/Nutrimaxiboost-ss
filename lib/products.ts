@@ -1,31 +1,34 @@
+import { prefix } from "@/lib/prefix"; // adjust path as needed
+
 // Product database
 export const productDatabase = [
   {
     id: "1",
-    name: "Premium Headphones",
-    price: 2499.99,
-    image: "/placeholder.svg?height=600&width=600",
+    name: "Proteína Gold Standard 100% Whey",
+    price: 1781.62,
+    image: `${prefix}/images/whey.jpeg`,
     category: "featured",
     description:
-      "Experience crystal-clear sound with our Premium Headphones. Featuring active noise cancellation, comfortable ear cups, and a long-lasting battery, these headphones are perfect for music lovers and professionals alike.",
+      "Proteína aislada de suero de leche Optimum Nutrition - Gold Standard 100% Whey.",
     features: [
-      "Active Noise Cancellation",
-      "40-hour battery life",
-      "Bluetooth 5.0 connectivity",
-      "Built-in microphone for calls",
-      "Foldable design for easy storage",
+      "Contiene 24g de proteína por porción",
+      "Rápida absorción",
+      "Ideal para la recuperación muscular",
+      "Mezcla fácil en agua o leche",
+      "Disponible en múltiples sabores"
     ],
     specifications: {
-      "Driver Size": "40mm",
-      "Frequency Response": "20Hz - 20kHz",
-      Impedance: "32 Ohms",
-      Weight: "250g",
-      Charging: "USB-C",
-      Battery: "700mAh",
+      "Peso": "2,27 Kilogramos",
+      "Volumen": "2576 Mililitros",
+      "Unidades": "2270 gramos",
+      "Instrucciones de almacenaje": "Sí",
+      "Marca": "OPTIMUM NUTRITION",
+      "Formato": "Polvo",
+      "Descripción del rango de edad": "Adulto"
     },
     stock: 15,
     rating: 4.8,
-    reviews: 124,
+    reviews: 124
   },
   {
     id: "2",
@@ -47,7 +50,6 @@ export const productDatabase = [
       "Frequency Response": "20Hz - 20kHz",
       "Bluetooth Version": "5.2",
       "Battery Capacity": "50mAh (earbuds), 500mAh (case)",
-      Charging: "USB-C",
       Weight: "5g per earbud, 45g case",
     },
     stock: 23,
