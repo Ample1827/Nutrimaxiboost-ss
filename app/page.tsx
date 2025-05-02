@@ -222,16 +222,16 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Eco-Friendly Products for a Sustainable Lifestyle
+            Productos Saludables para un Estilo de Vida Sostenible
             </h1>
             <p className="text-xl mb-8 opacity-90">
-              Discover our curated collection of sustainable products that help you reduce your environmental footprint
-              without compromising on quality or style.
+            Descubre nuestra cuidada selección de productos que promueven el bienestar y el respeto por el medio ambiente,
+            sin sacrificar calidad, eficacia ni estilo.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/products">
                 <Button size="lg" className="bg-store-orange hover:bg-opacity-90 text-white">
-                  Shop Now
+                Compra ahora
                 </Button>
               </Link>
               <Link href="/about">
@@ -240,7 +240,7 @@ export default function Home() {
                   variant="outline"
                   className="bg-transparent border-white text-white hover:bg-white hover:text-store-dark-green"
                 >
-                  Learn More
+                  Más información
                 </Button>
               </Link>
             </div>
@@ -256,27 +256,27 @@ export default function Home() {
               <div className="bg-store-orange/10 p-4 rounded-full mb-4">
                 <ShieldCheck className="h-8 w-8 text-store-orange" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Quality Guaranteed</h3>
+              <h3 className="text-xl font-semibold mb-2">Calidad garantizada</h3>
               <p className="text-gray-600">
-                All our products are carefully selected to ensure the highest quality standards.
+              Todos nuestros productos son cuidadosamente seleccionados para garantizar los más altos estándares de calidad.
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6">
               <div className="bg-store-bright-green/10 p-4 rounded-full mb-4">
                 <Truck className="h-8 w-8 text-store-bright-green" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
+              <h3 className="text-xl font-semibold mb-2">Entrega rápida</h3>
               <p className="text-gray-600">
-                We offer quick and reliable shipping to get your products to you as soon as possible.
+              Ofrecemos envío rápido y confiable para que usted reciba sus productos lo antes posible.
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6">
               <div className="bg-store-dark-green/10 p-4 rounded-full mb-4">
                 <Clock className="h-8 w-8 text-store-dark-green" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
+              <h3 className="text-xl font-semibold mb-2">Soporte 24/7</h3>
               <p className="text-gray-600">
-                Our customer service team is always available to assist you with any questions.
+              Nuestro equipo de atención al cliente está siempre disponible para ayudarle con cualquier pregunta.
               </p>
             </div>
           </div>
@@ -287,12 +287,12 @@ export default function Home() {
       <section className="py-16 container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-store-dark-green">Top Selling Products</h2>
-            <p className="text-gray-600 mt-2">Our most popular products based on sales</p>
+            <h2 className="text-3xl font-bold text-store-dark-green">Productos más vendidos</h2>
+            <p className="text-gray-600 mt-2">Nuestros productos más populares según las ventas</p>
           </div>
           <Link href="/products">
             <Button variant="outline" className="flex items-center gap-2">
-              View All <ArrowRight className="h-4 w-4" />
+              Ver Todo <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
         </div>
@@ -304,7 +304,7 @@ export default function Home() {
               className="group relative border rounded-lg overflow-hidden flex flex-col hover:border-store-bright-green transition-colors"
             >
               <div className="absolute top-2 right-2 bg-store-orange text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
-                <TrendingUp className="h-3 w-3" /> Top Seller
+                <TrendingUp className="h-3 w-3" /> Mas Vendidos
               </div>
               <Link href={`/product/${product.id}`} className="block aspect-square relative bg-muted">
                 <Image
@@ -343,22 +343,22 @@ export default function Home() {
 
       <main className="container mx-auto px-4 py-8">
         <section className="mb-12" id="featured">
-          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">Featured Products</h2>
+          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">🏋️‍♂️ PROTEÍNAS</h2>
           <ProductGrid category="featured" products={featuredProducts} />
         </section>
 
         <section className="mb-12" id="electronics">
-          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">Electronics</h2>
+          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">💊 VITAMINAS / SALUD</h2>
           <ProductGrid category="electronics" products={electronicsProducts} />
         </section>
 
         <section className="mb-12" id="home">
-          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">Home & Living</h2>
+          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">🍽️ COMIDA</h2>
           <ProductGrid category="home" products={homeProducts} />
         </section>
 
         <section className="mb-12" id="accessories">
-          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">Accessories</h2>
+          <h2 className="text-3xl font-bold mb-6 text-store-dark-green">⚖️ PÉRDIDA DE PESO </h2>
           <ProductGrid category="accessories" products={accessoriesProducts} />
         </section>
       </main>
