@@ -562,9 +562,9 @@ export const productDatabase = [
   },
 ]
 
-export type Product = (typeof productDatabase)[0]
+export type Product = (typeof productDatabase)[number]
 
-export function getProductById(id: string): Product | undefined {
+export async function getProductById(id: string): Promise<Product | undefined> {
   return productDatabase.find((product) => product.id === id)
 }
 
