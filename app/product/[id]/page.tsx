@@ -7,14 +7,17 @@ import type { Metadata } from "next";
 // Static paths
 export async function generateStaticParams() {
   const products = await getAllProducts();
-  return products.map((product: { id: string }) => ({
-    id: product.id,
-  }));
+  return products.map((product) => ({ id: product.id }));
 }
 
-// Metadata
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const product = await getProductById(params.id);
+// Metadata with awaited params
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const product = await getProductById(id);
   if (!product) return {};
   return {
     title: product.name,
@@ -22,10 +25,14 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-// ✅ Page component (final fix)
-export default async function ProductDetailPage(props: { params: { id: string } }) {
-  const { params } = props;
-  const product = await getProductById(params.id);
+// Page component with awaited params
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const product = await getProductById(id);
 
   if (!product) {
     notFound();
