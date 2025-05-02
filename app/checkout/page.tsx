@@ -1,66 +1,58 @@
-"use client";
+"use client"
 
-import type React from "react";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
-import StoreLayout from "@/components/store-layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { CheckCircle2, Leaf, Scissors, CreditCard } from "lucide-react";
-import { useCart } from "@/hooks/use-cart";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type React from "react"
+
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import Image from "next/image"
+import StoreLayout from "@/components/store-layout"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Separator } from "@/components/ui/separator"
+import { Textarea } from "@/components/ui/textarea"
+import { useToast } from "@/hooks/use-toast"
+import { CheckCircle2, Leaf, Scissors, CreditCard } from "lucide-react"
+import { useCart } from "@/hooks/use-cart"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function CheckoutPage() {
-  const { cart, totalPrice, clearCart } = useCart();
-  const { toast } = useToast();
-  const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isComplete, setIsComplete] = useState(false);
-  const [orderNumber, setOrderNumber] = useState("");
-  const [sameAsBilling, setSameAsBilling] = useState(true);
+  const { cart, totalPrice, clearCart } = useCart()
+  const { toast } = useToast()
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isComplete, setIsComplete] = useState(false)
+  const [orderNumber, setOrderNumber] = useState("")
+  const [sameAsBilling, setSameAsBilling] = useState(true)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
 
-    try {
-      // Generate random order number
-      const randomOrderNumber = "ECO-" + Math.floor(100000 + Math.random() * 900000).toString();
-      setOrderNumber(randomOrderNumber);
+    // Generate random order number
+    const randomOrderNumber = "ECO-" + Math.floor(100000 + Math.random() * 900000).toString()
+    setOrderNumber(randomOrderNumber)
 
-      // Simulate processing
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      setIsComplete(true);
-      clearCart();
+    // Simulate processing
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setIsComplete(true)
+      clearCart()
       toast({
         title: "Order placed successfully!",
         description: "Thank you for your purchase.",
         duration: 5000,
-      });
-    } catch (error) {
-      toast({
-        title: "Error placing order",
-        description: "Something went wrong. Please try again.",
-        duration: 5000,
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+      })
+    }, 1500)
+  }
 
   if (isComplete) {
     const orderDate = new Date().toLocaleDateString("es-MX", {
       year: "numeric",
       month: "long",
       day: "numeric",
-    });
-    const orderTime = new Date().toLocaleTimeString("es-MX");
+    })
+    const orderTime = new Date().toLocaleTimeString("es-MX")
 
     return (
       <StoreLayout>
@@ -131,6 +123,16 @@ export default function CheckoutPage() {
                 </p>
               </div>
 
+              <div className="relative">
+                <div className="absolute left-0 -ml-6 top-1/2 transform -translate-y-1/2 w-6 h-12 bg-gray-100 rounded-r-full"></div>
+                <div className="absolute right-0 -mr-6 top-1/2 transform -translate-y-1/2 w-6 h-12 bg-gray-100 rounded-l-full"></div>
+                <div className="border-t border-dashed my-6 relative">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4">
+                    <Scissors className="h-5 w-5 text-gray-400" />
+                  </div>
+                </div>
+              </div>
+
               <div className="text-center mt-6">
                 <p className="text-sm text-gray-500 mb-4">
                   If you have any questions about your order, please contact our customer support.
@@ -149,7 +151,7 @@ export default function CheckoutPage() {
           </div>
         </div>
       </StoreLayout>
-    );
+    )
   }
 
   if (cart.length === 0) {
@@ -165,7 +167,7 @@ export default function CheckoutPage() {
           </div>
         </div>
       </StoreLayout>
-    );
+    )
   }
 
   return (
@@ -183,7 +185,7 @@ export default function CheckoutPage() {
                   <TabsTrigger value="payment">Payment</TabsTrigger>
                   <TabsTrigger value="review">Review</TabsTrigger>
                 </TabsList>
-
+                
                 {/* Shipping Information */}
                 <TabsContent value="shipping" className="bg-white p-6 rounded-lg border">
                   <h2 className="text-xl font-semibold mb-4">Shipping Information</h2>
@@ -231,7 +233,7 @@ export default function CheckoutPage() {
                     </div>
                   </div>
                 </TabsContent>
-
+                
                 {/* Payment Information */}
                 <TabsContent value="payment" className="bg-white p-6 rounded-lg border">
                   <h2 className="text-xl font-semibold mb-4">Payment Information</h2>
@@ -312,7 +314,7 @@ export default function CheckoutPage() {
                     )}
                   </div>
                 </TabsContent>
-
+                
                 {/* Order Review */}
                 <TabsContent value="review" className="bg-white p-6 rounded-lg border">
                   <h2 className="text-xl font-semibold mb-4">Order Review</h2>
@@ -326,16 +328,16 @@ export default function CheckoutPage() {
                       <h3 className="font-medium">Payment Method</h3>
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <input type="radio" id="payment-card" name="payment" defaultChecked aria-labelledby="payment-card-label" />
-                          <Label id="payment-card-label" htmlFor="payment-card">Credit Card</Label>
+                          <input type="radio" id="payment-card" name="payment" defaultChecked />
+                          <Label htmlFor="payment-card">Credit Card</Label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" id="payment-cash" name="payment" aria-labelledby="payment-cash-label" />
-                          <Label id="payment-cash-label" htmlFor="payment-cash">Cash on Delivery</Label>
+                          <input type="radio" id="payment-cash" name="payment" />
+                          <Label htmlFor="payment-cash">Cash on Delivery</Label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" id="payment-transfer" name="payment" aria-labelledby="payment-transfer-label" />
-                          <Label id="payment-transfer-label" htmlFor="payment-transfer">Bank Transfer</Label>
+                          <input type="radio" id="payment-transfer" name="payment" />
+                          <Label htmlFor="payment-transfer">Bank Transfer</Label>
                         </div>
                       </div>
                     </div>
@@ -399,13 +401,4 @@ export default function CheckoutPage() {
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
                     <span className="text-store-dark-green">MXN ${(totalPrice + 150).toFixed(2)}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </StoreLayout>
-  );
-}
+                  </div\

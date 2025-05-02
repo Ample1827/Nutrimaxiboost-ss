@@ -42,7 +42,7 @@ export default function ProductGrid({ products, category }: ProductGridProps) {
         >
           <Link href={`/product/${product.id}`} className="block aspect-square relative bg-muted">
             <Image
-              src={product.image || "/images/whey.jpeg"}
+              src={product.image || "/placeholder.svg"}
               alt={product.name}
               fill
               className="object-cover transition-transform group-hover:scale-105"
