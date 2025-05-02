@@ -1,5 +1,6 @@
 import StoreLayout from "@/components/store-layout"
 import ProductGrid from "@/components/product-grid"
+import { prefix } from "@/lib/prefix";
 
 // All products combined
 const allProducts = [
@@ -8,7 +9,12 @@ const allProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: "/images/whey.jpeg",
+    image: {
+          src: `${prefix}/images/whey.jpeg`,
+          alt: "Premium Headphones",
+          width: 500,
+          height: 500
+        },
     category: "featured",
   },
   {
