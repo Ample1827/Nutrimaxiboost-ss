@@ -4,20 +4,16 @@ import StoreLayout from "@/components/store-layout";
 import ProductDetail from "@/components/product-detail";
 import type { Metadata } from "next";
 
-// ✅ Static paths for all product pages
-export async function generateStaticParams(): Promise<{ id: string }[]> {
+// Static paths
+export async function generateStaticParams() {
   const products = await getAllProducts();
   return products.map((product: { id: string }) => ({
     id: product.id,
   }));
 }
 
-// ✅ Metadata per product
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> {
+// Metadata
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const product = await getProductById(params.id);
   if (!product) return {};
   return {
@@ -26,14 +22,9 @@ export async function generateMetadata({
   };
 }
 
-// ✅ Page component with correct typing
-interface ProductDetailPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
+// ✅ Page component (final fix)
+export default async function ProductDetailPage(props: { params: { id: string } }) {
+  const { params } = props;
   const product = await getProductById(params.id);
 
   if (!product) {
