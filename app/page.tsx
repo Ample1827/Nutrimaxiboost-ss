@@ -4,15 +4,15 @@ import StoreLayout from "@/components/store-layout"
 import ProductGrid from "@/components/product-grid"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Star, TrendingUp, ShieldCheck, Truck, Clock } from "lucide-react"
+import { prefix } from "@/lib/prefix";
 
-// Top selling products data
 const topSellingProducts = [
   {
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
     image: {
-      src: "/Nutrimaxiboost-ss/images/whey.jpeg", // <-- Note the prefix
+      src: `${prefix}/images/whey.jpeg`,
       alt: "Premium Headphones",
       width: 500,
       height: 500
