@@ -15,9 +15,9 @@ const allProducts = [
   },
   {
     id: "2",
-    name: "Wireless Earbuds",
+    name: "Optimum Nutrition 100% Casein",
     price: 1799.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: `${prefix}/images/id2.jpg`,
     category: "featured",
   },
   {

@@ -32,30 +32,29 @@ export const productDatabase = [
   },
   {
     id: "2",
-    name: "Wireless Earbuds",
+    name: "Optimum Nutrition 100% Casein",
     price: 1799.99,
-    image: "/placeholder.svg?height=600&width=600",
+    image: `${prefix}/images/id2.jpg`, // Update path if needed
     category: "featured",
     description:
-      "Enjoy your music on the go with our Wireless Earbuds. These compact earbuds deliver powerful sound, feature touch controls, and come with a charging case that provides up to 24 hours of total playtime.",
+      "Proteína de caseína de liberación lenta sabor vainilla de Optimum Nutrition. Ideal para tomar antes de dormir o entre comidas.",
     features: [
-      "Touch controls",
-      "Water-resistant (IPX5)",
-      "6-hour playtime per charge",
-      "24-hour total playtime with case",
-      "Noise isolation",
+      "Contiene 24g de proteína por porción",
+      "Digestión lenta para liberación prolongada de aminoácidos",
+      "Sabor vainilla suave y agradable",
+      "Ideal para consumo nocturno",
+      "Apoya la recuperación muscular durante el descanso"
     ],
     specifications: {
-      "Driver Size": "8mm",
-      "Frequency Response": "20Hz - 20kHz",
-      "Bluetooth Version": "5.2",
-      "Battery Capacity": "50mAh (earbuds), 500mAh (case)",
-      Weight: "5g per earbud, 45g case",
+      "Unidades": "1800 gramos",
+      "Marca": "OPTIMUM NUTRITION",
+      "ASIN": "B0171QP7BW"
     },
     stock: 23,
     rating: 4.6,
-    reviews: 89,
-  },
+    reviews: 56
+  }
+  ,
   {
     id: "3",
     name: "Smart Watch",
