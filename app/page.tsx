@@ -4,19 +4,17 @@ import StoreLayout from "@/components/store-layout"
 import ProductGrid from "@/components/product-grid"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Star, TrendingUp, ShieldCheck, Truck, Clock } from "lucide-react"
-import { prefix } from "@/lib/prefix";
+import { prefix } from "@/lib/prefix"; // adjust path as needed
 
+
+
+// Top selling products data
 const topSellingProducts = [
   {
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: {
-      src: `${prefix}/images/whey.jpeg`,
-      alt: "Premium Headphones",
-      width: 500,
-      height: 500
-    },
+    image: `${prefix}/images/whey.jpeg`,
     category: "featured",
     rating: 4.8,
     sales: 1245,
@@ -65,7 +63,7 @@ const featuredProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: `${prefix}/images/whey.jpeg`,
+    image: "/placeholder.svg?height=300&width=300",
     category: "featured",
   },
   {

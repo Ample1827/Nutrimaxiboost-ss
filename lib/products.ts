@@ -1,11 +1,10 @@
-import { prefix } from "@/lib/prefix";
 // Product database
 export const productDatabase = [
   {
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: `${prefix}/images/whey.jpeg`, // Updated path
+    image: "/placeholder.svg?height=600&width=600",
     category: "featured",
     description:
       "Experience crystal-clear sound with our Premium Headphones. Featuring active noise cancellation, comfortable ear cups, and a long-lasting battery, these headphones are perfect for music lovers and professionals alike.",
@@ -563,19 +562,14 @@ export const productDatabase = [
   },
 ]
 
-export type Product = (typeof productDatabase)[number]
+export type Product = (typeof productDatabase)[0]
 
-export async function getProductById(id: string): Promise<Product | undefined> {
+export function getProductById(id: string): Product | undefined {
   return productDatabase.find((product) => product.id === id)
 }
 
-export async function getAllProducts() {
-  // Replace with real data source
-  return [
-    { id: "1" },
-    { id: "2" },
-    { id: "3" }
-  ]
+export function getAllProducts(): Product[] {
+  return productDatabase
 }
 
 export function getProductsByCategory(category: string): Product[] {
