@@ -11,7 +11,7 @@ const topSellingProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: "/public/images/whey.jpeg",
+    image: { src: "/images/whey.jpeg", alt: "Premium Headphones", width: 500, height: 500 },
     category: "featured",
     rating: 4.8,
     sales: 1245,
