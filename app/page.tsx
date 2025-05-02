@@ -11,7 +11,7 @@ const topSellingProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: "./Proteína de suero.jpeg?height=300&width=300",
+    image: "/images/whey.jpeg?height=300&width=300",
     category: "featured",
     rating: 4.8,
     sales: 1245,
@@ -60,7 +60,7 @@ const featuredProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/whey.jpeg?height=300&width=300",
     category: "featured",
   },
   {

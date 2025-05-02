@@ -568,8 +568,13 @@ export async function getProductById(id: string): Promise<Product | undefined> {
   return productDatabase.find((product) => product.id === id)
 }
 
-export function getAllProducts(): Product[] {
-  return productDatabase
+export async function getAllProducts() {
+  // Replace with real data source
+  return [
+    { id: "1" },
+    { id: "2" },
+    { id: "3" }
+  ]
 }
 
 export function getProductsByCategory(category: string): Product[] {

@@ -8,7 +8,7 @@ const allProducts = [
     id: "1",
     name: "Premium Headphones",
     price: 2499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/whey.jpeg?height=300&width=300",
     category: "featured",
   },
   {
