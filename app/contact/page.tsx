@@ -1,120 +1,135 @@
+"use client"
+
+import type React from "react"
+
+import { useState } from "react"
+import StoreLayout from "@/components/store-layout"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function ContactPage() {
-  return (
-    <div className="container px-4 md:px-6 py-8 md:py-12">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">Contáctanos</h1>
+  const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-        <div className="grid md:grid-cols-2 gap-8">
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false)
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+        duration: 5000,
+      })
+
+      // Reset form
+      const form = e.target as HTMLFormElement
+      form.reset()
+    }, 1500)
+  }
+
+  return (
+    <StoreLayout>
+      <div className="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 className="text-4xl font-bold mb-8 text-store-dark-green text-center">Contact Us</h1>
+
+        <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg mb-6">
-              ¡Nos encantaría saber de ti! Ya sea que tengas una pregunta sobre nuestros productos, necesites ayuda con
-              un pedido, o quieras proporcionar comentarios, estamos aquí para ayudarte.
+            <h2 className="text-2xl font-bold mb-6 text-store-dark-green">Get in Touch</h2>
+            <p className="mb-8">
+              Have questions about our products or services? We're here to help! Fill out the form and we'll get back to
+              you as soon as possible.
             </p>
 
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 mt-0.5 text-primary" />
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Mail className="h-6 w-6 text-store-orange flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-medium">Dirección</h3>
-                  <p className="text-muted-foreground">
-                    Calle Fitness 123
-                    <br />
-                    Ciudad Saludable, CS 12345
-                    <br />
-                    México
-                  </p>
+                  <h3 className="font-semibold">Email</h3>
+                  <p className="text-muted-foreground">info@ecostore.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3">
-                <Mail className="h-5 w-5 mt-0.5 text-primary" />
+              <div className="flex items-start gap-4">
+                <Phone className="h-6 w-6 text-store-orange flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-medium">Correo Electrónico</h3>
-                  <p className="text-muted-foreground">
-                    soporte@nutrimaxi.com
-                    <br />
-                    ventas@nutrimaxi.com
-                  </p>
+                  <h3 className="font-semibold">Phone</h3>
+                  <p className="text-muted-foreground">+52 (55) 1234-5678</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3">
-                <Phone className="h-5 w-5 mt-0.5 text-primary" />
+              <div className="flex items-start gap-4">
+                <MapPin className="h-6 w-6 text-store-orange flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-medium">Teléfono</h3>
+                  <h3 className="font-semibold">Address</h3>
                   <p className="text-muted-foreground">
-                    +52 (55) 1234-5678
+                    123 Eco Street
                     <br />
-                    Lunes - Viernes, 9am - 5pm CST
+                    Sustainable District
+                    <br />
+                    Mexico City, 12345
+                    <br />
+                    Mexico
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Envíanos un mensaje</CardTitle>
-              <CardDescription>
-                Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <div className="bg-white p-6 rounded-lg border">
+              <h2 className="text-2xl font-bold mb-6 text-store-dark-green">Send a Message</h2>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="first-name" className="text-sm font-medium">
-                      Nombre
-                    </label>
-                    <Input id="first-name" placeholder="Juan" required />
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input id="firstName" required />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="last-name" className="text-sm font-medium">
-                      Apellido
-                    </label>
-                    <Input id="last-name" placeholder="Pérez" required />
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input id="lastName" required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Correo Electrónico
-                  </label>
-                  <Input id="email" type="email" placeholder="juan.perez@ejemplo.com" required />
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" required />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Asunto
-                  </label>
-                  <Input id="subject" placeholder="¿Cómo podemos ayudarte?" required />
+                  <Label htmlFor="phone">Phone</Label>
+                  <Input id="phone" type="tel" />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Mensaje
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Por favor proporciona tantos detalles como sea posible..."
-                    rows={5}
-                    required
-                  />
+                  <Label htmlFor="subject">Subject</Label>
+                  <Input id="subject" required />
                 </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea id="message" rows={5} required />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-store-bright-green hover:bg-store-dark-green"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
               </form>
-            </CardContent>
-            <CardFooter>
-              <Button className="w-full">Enviar Mensaje</Button>
-            </CardFooter>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </StoreLayout>
   )
 }

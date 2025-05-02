@@ -25,13 +25,21 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Custom store colors
+        "store-orange": "#F29C1F",
+        "store-dark-green": "#156934",
+        "store-bright-green": "#57B33E",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#156934", // Dark Green as primary
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#F29C1F", // Orange as secondary
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          DEFAULT: "#57B33E", // Bright Green as accent
+          foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -41,10 +49,6 @@ const config = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -52,13 +56,6 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        // Brand colors
-        brand: {
-          orange: "#FF9800",
-          darkGreen: "#0F5132",
-          lightGreen: "#4CAF50",
-          white: "#FFFFFF",
         },
       },
       borderRadius: {

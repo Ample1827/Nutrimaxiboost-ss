@@ -1,41 +1,161 @@
-import { Suspense } from "react"
-import { allProducts } from "@/lib/products"
+import StoreLayout from "@/components/store-layout"
 import ProductGrid from "@/components/product-grid"
-import { ProductFilter } from "@/components/product-filter"
-import { Skeleton } from "@/components/ui/skeleton"
+
+// All products combined
+const allProducts = [
+  // Featured Products
+  {
+    id: "1",
+    name: "Premium Headphones",
+    price: 2499.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "featured",
+  },
+  {
+    id: "2",
+    name: "Wireless Earbuds",
+    price: 1799.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "featured",
+  },
+  {
+    id: "3",
+    name: "Smart Watch",
+    price: 3899.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "featured",
+  },
+  {
+    id: "4",
+    name: "Bluetooth Speaker",
+    price: 1599.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "featured",
+  },
+  {
+    id: "5",
+    name: "Fitness Tracker",
+    price: 1199.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "featured",
+  },
+  // Electronics
+  {
+    id: "6",
+    name: "Smartphone",
+    price: 13999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "electronics",
+  },
+  {
+    id: "7",
+    name: "Tablet",
+    price: 6999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "electronics",
+  },
+  {
+    id: "8",
+    name: "Laptop",
+    price: 19999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "electronics",
+  },
+  {
+    id: "9",
+    name: "Digital Camera",
+    price: 8999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "electronics",
+  },
+  {
+    id: "10",
+    name: "Power Bank",
+    price: 799.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "electronics",
+  },
+  // Home & Living
+  {
+    id: "11",
+    name: "Smart Light Bulbs",
+    price: 599.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "home",
+  },
+  {
+    id: "12",
+    name: "Coffee Maker",
+    price: 1799.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "home",
+  },
+  {
+    id: "13",
+    name: "Air Purifier",
+    price: 2999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "home",
+  },
+  {
+    id: "14",
+    name: "Robot Vacuum",
+    price: 5999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "home",
+  },
+  {
+    id: "15",
+    name: "Throw Blanket",
+    price: 999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "home",
+  },
+  // Accessories
+  {
+    id: "16",
+    name: "Phone Case",
+    price: 399.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "accessories",
+  },
+  {
+    id: "17",
+    name: "Wireless Charger",
+    price: 699.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "accessories",
+  },
+  {
+    id: "18",
+    name: "Laptop Sleeve",
+    price: 499.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "accessories",
+  },
+  {
+    id: "19",
+    name: "USB-C Hub",
+    price: 999.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "accessories",
+  },
+  {
+    id: "20",
+    name: "Screen Protector",
+    price: 299.99,
+    image: "/placeholder.svg?height=300&width=300",
+    category: "accessories",
+  },
+]
 
 export default function ProductsPage() {
   return (
-    <div className="container px-4 md:px-6 py-8">
-      <h1 className="text-3xl font-bold mb-6">Todos los Productos</h1>
-
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="w-full md:w-64 flex-shrink-0">
-          <ProductFilter />
-        </div>
-
-        <div className="flex-1">
-          <Suspense fallback={<ProductGridSkeleton />}>
-            <ProductGrid products={allProducts} />
-          </Suspense>
-        </div>
+    <StoreLayout>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-8 text-store-dark-green">All Products</h1>
+        <ProductGrid products={allProducts} category="all" />
       </div>
-    </div>
-  )
-}
-
-function ProductGridSkeleton() {
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-      {Array(10)
-        .fill(0)
-        .map((_, i) => (
-          <div key={i} className="border rounded-lg p-2 space-y-2">
-            <Skeleton className="h-32 sm:h-36 md:h-40 w-full rounded-md" />
-            <Skeleton className="h-3 w-3/4" />
-            <Skeleton className="h-3 w-1/2" />
-          </div>
-        ))}
-    </div>
+    </StoreLayout>
   )
 }
