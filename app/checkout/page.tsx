@@ -63,7 +63,7 @@ export default function CheckoutPage() {
               <div className="flex justify-center mb-2">
                 <Leaf className="h-10 w-10 text-store-bright-green" />
               </div>
-              <h1 className="text-2xl font-bold">EcoStore</h1>
+              <h1 className="text-2xl font-bold">Nutrimaxiboost</h1>
               <p className="opacity-80">Purchase Receipt</p>
             </div>
 
@@ -145,7 +145,7 @@ export default function CheckoutPage() {
 
             {/* Ticket Footer */}
             <div className="bg-gray-50 p-4 text-center text-sm text-gray-500 border-t">
-              <p>© {new Date().getFullYear()} EcoStore. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Nutrimaxiboost. All rights reserved.</p>
               <p>123 Eco Street, Sustainable District, Mexico City</p>
             </div>
           </div>

@@ -22,7 +22,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
             <div className="flex items-center gap-2">
               <Link href="/" className="flex items-center gap-2">
                 <Leaf className="h-6 w-6 text-store-bright-green" />
-                <span className="font-bold text-xl">EcoStore</span>
+                <span className="font-bold text-xl">Nutrimaxiboost</span>
               </Link>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
@@ -33,7 +33,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
                 Products
               </Link>
               <Link href="/about" className="hover:text-store-orange transition-colors">
-                About Us
+              Sobre nosotros
               </Link>
               <Link href="/contact" className="hover:text-store-orange transition-colors">
                 Contact
@@ -68,7 +68,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
                 Products
               </Link>
               <Link href="/about" className="text-sm hover:text-store-orange transition-colors">
-                About Us
+              Sobre nosotros
               </Link>
               <Link href="/contact" className="text-sm hover:text-store-orange transition-colors">
                 Contact
@@ -81,9 +81,9 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
           <div className="container mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Leaf className="h-5 w-5 text-store-bright-green" />
-              <span className="font-bold">EcoStore</span>
+              <span className="font-bold">Nutrimaxiboost</span>
             </div>
-            <p className="text-sm opacity-80">© {new Date().getFullYear()} EcoStore. All rights reserved.</p>
+            <p className="text-sm opacity-80">© {new Date().getFullYear()} Nutrimaxiboost. All rights reserved.</p>
           </div>
         </footer>
       </div>

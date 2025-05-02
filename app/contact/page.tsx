@@ -52,7 +52,7 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6 text-store-orange flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">info@ecostore.com</p>
+                  <p className="text-muted-foreground">info@Nutrimaxiboost.com</p>
                 </div>
               </div>
 
