@@ -57,227 +57,261 @@ export const productDatabase = [
   ,
   {
     id: "3",
-    name: "Smart Watch",
-    price: 3899.99,
-    image: "/placeholder.svg?height=600&width=600",
+    name: "Birdman Falcon Performance Proteína Premium",
+    price: 917.99,
+    image: `${prefix}/images/id3.jpg`, // Update path as needed
     category: "featured",
     description:
-      "Stay connected and track your fitness with our Smart Watch. This versatile device monitors your heart rate, counts steps, displays notifications, and has a battery life of up to 7 days.",
+      "Proteína vegana premium Birdman Falcon con mezcla de proteínas vegetales, creatina y probióticos. Ideal para atletas con necesidades específicas de digestión o dietas restringidas.",
     features: [
-      "Heart rate monitoring",
-      "Step counter and activity tracking",
-      "Sleep analysis",
-      "Notification display",
-      "Water-resistant (50m)",
-      "7-day battery life",
+      "Libre de gluten y lactosa",
+      "Apto para veganos, celiacos e intolerantes",
+      "Contiene proteínas de chícharo, arroz y arándano",
+      "Incluye creatina Creapure® y mezcla de aminoácidos",
+      "Con enzimas digestivas, probióticos y extractos naturales"
     ],
     specifications: {
-      Display: '1.4" AMOLED',
-      Resolution: "454 x 454 pixels",
-      Sensors: "Heart rate, Accelerometer, Gyroscope",
-      Battery: "420mAh",
-      Connectivity: "Bluetooth 5.0, GPS",
-      Compatibility: "iOS 10.0+, Android 6.0+",
+      "Unidades": "1 unidad",
+      "Marca": "BIRDMAN",
+      "ASIN": "B085WBRBHV",
+      "Descripción del rango de edad": "Adulto"
     },
+    instructions:
+      "Mezcla 1 cucharada (38g) con 350 ml de agua. Consumir el mismo día. Almacenar en lugar fresco y seco, lejos del sol.",
+    legal_notice: "Este producto no es un medicamento.",
     stock: 8,
-    rating: 4.7,
-    reviews: 156,
-  },
+    rating: 4.6,
+    reviews: 1339
+  }
+  ,
   {
     id: "4",
-    name: "Bluetooth Speaker",
-    price: 1599.99,
-    image: "/placeholder.svg?height=600&width=600",
+    name: "Birdman Falcon Protein Proteína",
+    price: 899.99,
+    image: `${prefix}/images/id4.jpg`, 
     category: "featured",
     description:
-      "Fill your space with rich, immersive sound using our Bluetooth Speaker. With 360° sound projection, waterproof design, and 12 hours of playtime, it's perfect for any occasion, indoors or outdoors.",
+      "Proteína vegetal Birdman Falcon en presentación básica. Ideal para personas que buscan una opción saludable y sostenible para complementar su nutrición diaria.",
     features: [
-      "360° sound projection",
-      "Waterproof (IPX7)",
-      "12-hour playtime",
-      "Built-in microphone for calls",
-      "Connects to multiple devices",
+      "A base de proteínas vegetales",
+      "Apto para adultos con dietas veganas o restringidas",
+      "Libre de alérgenos comunes",
+      "Alta digestibilidad",
+      "Sabor natural y suave"
     ],
     specifications: {
-      "Output Power": "20W",
-      "Frequency Response": "60Hz - 20kHz",
-      Battery: "3600mAh",
-      "Charging Time": "3 hours",
-      "Bluetooth Range": "30 feet",
-      Weight: "560g",
+      "Unidades": "1 gramo",
+      "Marca": "BIRDMAN",
+      "ASIN": "B08TYZ7L1M",
+      "Descripción del rango de edad": "Adulto"
     },
     stock: 19,
-    rating: 4.5,
-    reviews: 78,
+    rating: 4.7,
+    reviews: 3219,
+    questions: [
+      "¿Esta proteína contiene azúcar añadida?",
+      "¿Es adecuada para personas con enfermedad celíaca?",
+      "¿Cuántos gramos de proteína hay por porción?",
+      "¿Contiene soya o alérgenos comunes?",
+      "¿Cuál es el origen de sus ingredientes?"
+    ]
   },
   {
     id: "5",
-    name: "Fitness Tracker",
+    name: "MuscleMeds Carnivor Proteína de Carne - Sabor Chocolate 2716g",
     price: 1199.99,
-    image: "/placeholder.svg?height=600&width=600",
+    image: `${prefix}/images/id5.jpg`, // Update path if needed
     category: "featured",
     description:
-      "Monitor your health and fitness goals with our Fitness Tracker. Track steps, heart rate, sleep quality, and more. The slim design and long battery life make it perfect for everyday wear.",
+      "Carnivor de MuscleMeds es una proteína en polvo elaborada a base de carne de res hidrolizada. Ideal para quienes buscan una alternativa sin lactosa a la proteína tradicional de suero.",
     features: [
-      "Step counting",
-      "Heart rate monitoring",
-      "Sleep tracking",
-      "Multiple sport modes",
-      "Notification alerts",
-      "10-day battery life",
+      "Proteína de carne de res hidrolizada",
+      "Sabor chocolate intenso",
+      "Sin lactosa ni colesterol",
+      "Alta concentración de proteína por porción",
+      "Ideal para ganancia de masa muscular"
     ],
     specifications: {
-      Display: '0.96" OLED',
-      Battery: "110mAh",
-      "Water Resistance": "IP68",
-      Sensors: "Heart rate, Accelerometer",
-      Connectivity: "Bluetooth 4.2",
-      Weight: "24g",
+      "Unidades": "2716 gramos",
+      "Marca": "MuscleMeds",
+      "ASIN": "B0759NCXHY",
+      "Descripción del rango de edad": "Adulto"
     },
     stock: 27,
-    rating: 4.4,
-    reviews: 112,
-  },
-  // Electronics
+    rating: 4.6,
+    reviews: 455,
+    questions: [
+      "¿Esta proteína contiene lactosa o derivados lácteos?",
+      "¿Cuántas porciones contiene el envase?",
+      "¿Se puede mezclar con leche vegetal?",
+      "¿Es apta para personas intolerantes a la lactosa?",
+      "¿Cuál es el contenido de creatina por porción?"
+    ]
+  }
+  ,
+  // 💊 VITAMINAS / SALUD
   {
     id: "6",
-    name: "Smartphone",
-    price: 13999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "electronics",
+    name: "Omega 3 - B Life Company (90 Capletas)",
+    price: 499.00, // Update if you have a specific price
+    image: `${prefix}/images/id6.jpg`, // Update path if needed
+    category: "featured",
     description:
-      "Experience cutting-edge technology with our Smartphone. Featuring a stunning display, powerful processor, and advanced camera system, this phone delivers exceptional performance for all your needs.",
+      "Complemento alimenticio con Omega 3 en formato de capletas. Ideal para apoyar la salud cardiovascular, cerebral y articular en adultos.",
     features: [
-      '6.5" AMOLED display',
-      "Triple camera system",
-      "8GB RAM, 256GB storage",
-      "5G connectivity",
-      "Fast charging",
-      "Water and dust resistant",
+      "Contiene ácidos grasos Omega 3 EPA y DHA",
+      "Apoya la salud del corazón y el cerebro",
+      "Formato en capletas de fácil consumo",
+      "Apto para adultos",
+      "Marca confiable con alta satisfacción del cliente"
     ],
     specifications: {
-      Processor: "Octa-core 2.8GHz",
-      Display: '6.5" AMOLED, 120Hz',
-      Camera: "48MP main, 12MP ultra-wide, 8MP telephoto",
-      Battery: "4500mAh",
-      OS: "Android 12",
-      Dimensions: "158 x 73 x 8.1mm",
+      "Unidades": "90 unidades",
+      "Marca": "B Life Company",
+      "Formato": "Capleta",
+      "Descripción del rango de edad": "Adulto",
+      "ASIN": "B0CGKFND4Z"
     },
     stock: 12,
     rating: 4.7,
-    reviews: 203,
+    reviews: 2950,
+    questions: [
+      "¿Cuántas capletas se deben tomar al día?",
+      "¿Contiene algún alérgeno como soya o gluten?",
+      "¿Cuál es el contenido de EPA y DHA por dosis?",
+      "¿Es de origen vegetal o marino?",
+      "¿Tiene sabor o es fácil de tragar?"
+    ]
   },
   {
     id: "7",
-    name: "Tablet",
-    price: 6999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "electronics",
+    name: "Arándano Concentrado 50:1 con Vitamina C - 180 Cápsulas",
+    price: 379.00, // Estimado, puedes actualizarlo con el precio real
+    image: `${prefix}/images/id7.jpg`, // Ajusta el path si es necesario
+    category: "featured",
     description:
-      "Enhance your productivity and entertainment with our Tablet. The large, high-resolution display is perfect for work, gaming, and streaming, while the powerful processor ensures smooth performance.",
+      "Suplemento de arándano concentrado 50:1 con vitamina C. Apoya la salud del tracto urinario, fortalece el sistema inmune y es apto para adultos.",
     features: [
-      '10.9" Liquid Retina display',
-      "64GB/256GB storage options",
-      "12MP wide camera",
-      "Stereo speakers",
-      "All-day battery life",
-      "Compatible with keyboard and stylus",
+      "Concentración 50:1 de extracto de arándano",
+      "Enriquecido con vitamina C",
+      "Apoya la salud urinaria",
+      "Formato en cápsulas de fácil consumo",
+      "Apto para uso diario en adultos"
     ],
     specifications: {
-      Processor: "A14 Bionic chip",
-      Display: '10.9" Liquid Retina, 2360 x 1640',
-      Camera: "12MP wide, 7MP front",
-      Battery: "28.6Wh",
-      Connectivity: "Wi-Fi 6, Bluetooth 5.0",
-      Dimensions: "247.6 x 178.5 x 6.1mm",
+      "Unidades": "180 unidades",
+      "Marca": "B Life Company",
+      "Formato": "Cápsula",
+      "Descripción del rango de edad": "Adulto",
+      "ASIN": "B0BH6L1KQQ"
     },
     stock: 16,
-    rating: 4.8,
+    rating: 4.7,
     reviews: 145,
+    questions: [
+      "¿Cuántas cápsulas se recomienda tomar al día?",
+      "¿Es apto para personas con diabetes?",
+      "¿Tiene contraindicaciones si se toma por periodos prolongados?",
+      "¿Es de origen natural o contiene aditivos?",
+      "¿Cuál es el porcentaje de vitamina C por dosis?"
+    ]
   },
   {
     id: "8",
-    name: "Laptop",
-    price: 19999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "electronics",
+    name: "Homodeus Neuro Shield Platinum - 60 Cápsulas",
+    price: 849.00, // Puedes ajustar el precio si tienes el dato real
+    image: `${prefix}/images/id8.jpg`, // Cambia el path si corresponde
+    category: "featured",
     description:
-      "Power through your workday with our high-performance Laptop. With a fast processor, ample storage, and long battery life, this laptop is designed for professionals, students, and creatives alike.",
+      "Suplemento neuroprotector de alta gama diseñado para apoyar la memoria, concentración y función cognitiva general. Fórmula avanzada en cápsulas, ideal para adultos.",
     features: [
-      '15.6" Full HD display',
-      "Intel Core i7 processor",
-      "16GB RAM, 512GB SSD",
-      "Backlit keyboard",
-      "10-hour battery life",
-      "Windows 11 Pro",
+      "Apoya la salud cerebral y cognitiva",
+      "Fórmula avanzada con ingredientes neuroprotectores",
+      "Ideal para mejorar memoria y concentración",
+      "Formato en cápsulas fáciles de consumir",
+      "Diseñado para adultos con alta exigencia mental"
     ],
     specifications: {
-      Processor: "Intel Core i7-1165G7",
-      Graphics: "Intel Iris Xe",
-      Memory: "16GB DDR4",
-      Storage: "512GB NVMe SSD",
-      Display: '15.6" Full HD (1920 x 1080)',
-      Ports: "2x USB-C, 2x USB-A, HDMI, 3.5mm audio",
+      "Unidades": "60 unidades",
+      "Marca": "homodeus",
+      "Formato": "Cápsula",
+      "ASIN": "B0D8MCVM22"
     },
-    stock: 7,
-    rating: 4.9,
-    reviews: 178,
+    stock: 10,
+    rating: 4.6,
+    reviews: 17,
+    questions: [
+      "¿Se puede tomar junto con otros suplementos?",
+      "¿Cuánto tiempo se recomienda tomarlo para notar resultados?",
+      "¿Tiene efectos secundarios reportados?",
+      "¿Es apto para personas mayores?",
+      "¿Se puede consumir con el estómago vacío?"
+    ]
   },
   {
     id: "9",
-    name: "Digital Camera",
-    price: 8999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "electronics",
+    name: "B Life Multivitamínico para Hombre | 200 Cápsulas | 650 mg",
+    price: 499.00, // Puedes modificar el precio si lo tienes
+    image: `${prefix}/images/id9.jpg`, // Ajusta el path si es necesario
+    category: "featured",
     description:
-      "Capture life's moments with stunning clarity using our Digital Camera. With advanced features and intuitive controls, this camera is perfect for both beginners and experienced photographers.",
+      "Multivitamínico completo diseñado especialmente para las necesidades del hombre adulto. Fórmula balanceada con vitaminas y minerales esenciales en cápsulas de 650 mg.",
     features: [
-      "24.2MP CMOS sensor",
-      "4K video recording",
-      '3" vari-angle touchscreen',
-      "Built-in Wi-Fi and Bluetooth",
-      "45-point autofocus system",
-      "ISO range of 100-25600",
+      "Fórmula especializada para hombres",
+      "200 cápsulas por envase",
+      "Apoya energía, sistema inmunológico y salud general",
+      "Formato en cápsulas de fácil consumo",
+      "Alta concentración de vitaminas y minerales"
     ],
     specifications: {
-      Sensor: "24.2MP APS-C CMOS",
-      Processor: "DIGIC 8",
-      Autofocus: "45-point all cross-type",
-      Video: "4K at 24p, Full HD at 60p",
-      Battery: "LP-E17, approx. 600 shots",
-      Weight: "485g (body only)",
+      "Unidades": "200 unidades",
+      "Marca": "B Life Company",
+      "Formato": "Cápsula",
+      "Descripción del rango de edad": "Adulto",
+      "ASIN": "B08C4B9VDP"
     },
-    stock: 9,
+    stock: 18,
     rating: 4.6,
-    reviews: 92,
+    reviews: 5417,
+    questions: [
+      "¿Cuántas cápsulas se deben tomar al día?",
+      "¿Contiene hierro o es libre de este mineral?",
+      "¿Puede ser consumido por adolescentes?",
+      "¿Es apto para personas con presión alta?",
+      "¿Tiene sabor o es neutro?"
+    ]
   },
   {
     id: "10",
-    name: "Power Bank",
-    price: 799.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "electronics",
+    name: "B Life Company Zinc de 200 Cápsulas",
+    price: 389.00, // Puedes ajustar el precio según lo necesites
+    image: `${prefix}/images/id10.jpg`, // Ajusta la ruta si es necesario
+    category: "featured",
     description:
-      "Stay charged on the go with our high-capacity Power Bank. With fast charging capabilities and multiple ports, it can charge multiple devices simultaneously, making it perfect for travel and daily use.",
+      "Suplemento de Zinc en cápsulas, ideal para fortalecer el sistema inmunológico, apoyar la salud celular y mejorar la piel. Presentación de 200 cápsulas por envase.",
     features: [
-      "20,000mAh capacity",
-      "Fast charging (18W)",
-      "Dual USB-A ports",
-      "USB-C input/output",
-      "LED power indicator",
-      "Compact and portable design",
+      "200 cápsulas por envase",
+      "Apoya el sistema inmunológico",
+      "Contribuye a la salud de piel, cabello y uñas",
+      "Fácil absorción",
+      "Apto para consumo diario"
     ],
     specifications: {
-      Capacity: "20,000mAh",
-      Input: "USB-C (5V/3A), Micro USB (5V/2A)",
-      Output: "USB-A (5V/3A, 9V/2A, 12V/1.5A), USB-C (5V/3A, 9V/2A, 12V/1.5A)",
-      Dimensions: "150 x 70 x 15mm",
-      Weight: "340g",
-      "Recharge Time": "4-5 hours (with 18W charger)",
+      "Unidades": "200 unidades",
+      "Marca": "B Life Company",
+      "Formato": "Cápsula",
+      "ASIN": "B08DQCHRJT"
     },
-    stock: 31,
-    rating: 4.5,
-    reviews: 217,
+    stock: 25,
+    rating: 4.7,
+    reviews: 1902,
+    questions: [
+      "¿Cuál es la dosis diaria recomendada?",
+      "¿Contiene algún ingrediente adicional?",
+      "¿Se puede tomar en ayunas?",
+      "¿Es apto para mujeres embarazadas?",
+      "¿Tiene efectos secundarios?"
+    ]
   },
   // Home & Living
   {
