@@ -316,284 +316,364 @@ export const productDatabase = [
   // Home & Living
   {
     id: "11",
-    name: "Smart Light Bulbs",
-    price: 599.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "home",
+    name: "Wild Protein | Barras altas en proteína | Sabor Chocolate",
+    price: 179.00, // Puedes ajustar el precio según sea necesario
+    image: `${prefix}/images/id11.jpg`, // Ajusta la ruta del archivo si aplica
+    category: "featured",
     description:
-      "Transform your home lighting with our Smart Light Bulbs. Control brightness, color, and schedules from your smartphone or voice assistant for the perfect ambiance in any room.",
+      "Barras de proteína sabor chocolate con ingredientes naturales como dátiles, soya inflada y crema de cacahuate. Sin azúcar añadida, 15 g de proteína por porción. Perfectas como snack saludable.",
     features: [
-      "16 million colors",
-      "Dimmable brightness",
-      "Voice control compatible",
-      "Scheduling and routines",
-      "No hub required",
-      "Energy efficient",
+      "15 g de proteína por porción",
+      "Sin azúcar añadida",
+      "Elaboradas con ingredientes naturales",
+      "Sin alérgenos declarados",
+      "Caja con barras listas para consumir"
     ],
     specifications: {
-      Wattage: "9W (60W equivalent)",
-      Lumens: "800lm",
-      "Color Temperature": "2700K-6500K",
-      Connectivity: "Wi-Fi 2.4GHz",
-      Compatibility: "Alexa, Google Assistant, HomeKit",
-      Lifespan: "25,000 hours",
+      "Marca": "Wild Protein",
+      "Fabricante": "Wild Foods",
+      "Tipo de envase": "Caja",
+      "Unidades": "225 g",
+      "Ingredientes": "Dátiles, soya inflada, proteína de suero de leche, chocolate amargo, crema de cacahuate",
+      "Contenido energético": "348 kcal por porción de 100 g",
+      "ASIN": "B0B8R5STGH",
+      "Modelo": "7yrW1I4pE"
     },
-    stock: 42,
+    stock: 34,
     rating: 4.4,
-    reviews: 156,
+    reviews: 211,
+    questions: [
+      "¿Cuántas barras contiene cada caja?",
+      "¿Es apto para dietas keto?",
+      "¿Contiene lactosa?",
+      "¿Tiene certificación libre de gluten?",
+      "¿Es adecuada como post-entrenamiento?"
+    ]
   },
   {
     id: "12",
-    name: "Coffee Maker",
-    price: 1799.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "home",
+    name: "Quest Hero Crispy | Barra de Proteína Sabor Galletas con Crema",
+    price: 389.00, // Ajusta el precio si es necesario
+    image: `${prefix}/images/id12.jpg`, // Cambia la ruta si aplica
+    category: "featured",
     description:
-      "Start your day right with our programmable Coffee Maker. With customizable brewing options and a sleek design, it delivers perfect coffee every time and looks great in any kitchen.",
+      "Disfruta de una deliciosa barra de proteína con sabor a galletas con crema. Quest Hero Crispy ofrece una textura crujiente y una opción ideal para quienes buscan un snack proteico bajo en azúcares.",
     features: [
-      "12-cup capacity",
-      "Programmable timer",
-      "Multiple brew strengths",
-      "Keep warm function",
-      "Auto shut-off",
-      "Removable water reservoir",
+      "Textura crujiente tipo crispy",
+      "Sabor galletas con crema",
+      "12 porciones por empaque",
+      "Ideal como snack saludable",
+      "Bajo en azúcares"
     ],
     specifications: {
-      Capacity: "12 cups (60 oz)",
-      Dimensions: "14 x 8 x 14 inches",
-      Power: "1000W",
-      "Water Reservoir": "Removable, 70 oz",
-      "Filter Type": "Permanent gold-tone",
-      Programs: "Regular, Bold, 1-4 cups",
-    },
-    stock: 18,
-    rating: 4.6,
-    reviews: 128,
-  },
-  {
-    id: "13",
-    name: "Air Purifier",
-    price: 2999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "home",
-    description:
-      "Breathe cleaner, fresher air with our advanced Air Purifier. Using a multi-stage filtration system, it removes allergens, dust, and odors for improved air quality in your home or office.",
-    features: [
-      "HEPA filtration",
-      "Activated carbon filter",
-      "Air quality sensor",
-      "Auto mode",
-      "Sleep mode",
-      "Filter replacement indicator",
-    ],
-    specifications: {
-      "Coverage Area": "Up to 500 sq ft",
-      "CADR Rating": "300 m³/h",
-      "Noise Level": "24-54 dB",
-      "Power Consumption": "40W",
-      "Filter Life": "6-12 months",
-      Dimensions: "21 x 12 x 12 inches",
-    },
-    stock: 14,
-    rating: 4.7,
-    reviews: 95,
-  },
-  {
-    id: "14",
-    name: "Robot Vacuum",
-    price: 5999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "home",
-    description:
-      "Let our Robot Vacuum handle the cleaning while you focus on what matters. With smart navigation, powerful suction, and app control, it keeps your floors spotless with minimal effort.",
-    features: [
-      "Smart mapping technology",
-      "2500Pa suction power",
-      "150-minute runtime",
-      "App and voice control",
-      "Automatic recharging",
-      "Scheduled cleaning",
-    ],
-    specifications: {
-      "Suction Power": "2500Pa",
-      Battery: "5200mAh",
-      Runtime: "Up to 150 minutes",
-      "Dust Bin Capacity": "600ml",
-      "Noise Level": "<65 dB",
-      "Climbing Ability": "Up to 2cm",
-    },
-    stock: 11,
-    rating: 4.8,
-    reviews: 173,
-  },
-  {
-    id: "15",
-    name: "Throw Blanket",
-    price: 999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "home",
-    description:
-      "Add warmth and style to your home with our luxurious Throw Blanket. Made from premium materials, it's perfect for cozy nights on the couch or as an elegant accent for your bedroom.",
-    features: [
-      "Ultra-soft fabric",
-      "Hypoallergenic",
-      "Lightweight yet warm",
-      "Elegant design",
-      "Machine washable",
-      "Multiple color options",
-    ],
-    specifications: {
-      Material: "100% Organic Cotton",
-      Dimensions: '50" x 60"',
-      Weight: "3 lbs",
-      Care: "Machine wash cold, tumble dry low",
-      Origin: "Ethically made",
-      Certifications: "OEKO-TEX Standard 100",
-    },
-    stock: 25,
-    rating: 4.9,
-    reviews: 87,
-  },
-  // Accessories
-  {
-    id: "16",
-    name: "Phone Case",
-    price: 399.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "accessories",
-    description:
-      "Protect your smartphone in style with our durable Phone Case. Designed for maximum protection without adding bulk, it features precise cutouts for easy access to all buttons and ports.",
-    features: [
-      "Military-grade drop protection",
-      "Slim profile",
-      "Wireless charging compatible",
-      "Raised edges for screen protection",
-      "Anti-yellowing material",
-      "Tactile button covers",
-    ],
-    specifications: {
-      Material: "Polycarbonate and TPU",
-      Compatibility: "iPhone 13/14 series, Samsung Galaxy S22/S23 series",
-      "Drop Protection": "Up to 10 feet",
-      Thickness: "2.5mm",
-      Weight: "35g",
-      Warranty: "Lifetime",
-    },
-    stock: 48,
-    rating: 4.6,
-    reviews: 312,
-  },
-  {
-    id: "17",
-    name: "Wireless Charger",
-    price: 699.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "accessories",
-    description:
-      "Charge your devices effortlessly with our Wireless Charger. Supporting fast charging for compatible devices, this sleek charger eliminates cable clutter and provides a convenient charging solution.",
-    features: [
-      "15W fast charging",
-      "Multi-device compatibility",
-      "LED charging indicator",
-      "Anti-slip surface",
-      "Foreign object detection",
-      "Compact design",
-    ],
-    specifications: {
-      Input: "QC 3.0 adapter (9V/2A)",
-      Output: "15W max",
-      "Charging Distance": "≤8mm",
-      Dimensions: "100mm diameter",
-      Compatibility: "Qi-enabled devices",
-      "Cable Length": "1.5m",
-    },
-    stock: 29,
-    rating: 4.5,
-    reviews: 187,
-  },
-  {
-    id: "18",
-    name: "Laptop Sleeve",
-    price: 499.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "accessories",
-    description:
-      "Keep your laptop protected with our stylish and functional Laptop Sleeve. The padded interior safeguards against bumps and scratches, while the water-resistant exterior provides protection from the elements.",
-    features: [
-      "Padded interior",
-      "Water-resistant exterior",
-      "Additional pocket for accessories",
-      "Reinforced zipper",
-      "Slim profile",
-      "Carry handle",
-    ],
-    specifications: {
-      Material: "Water-resistant polyester",
-      Sizes: '13", 14", 15.6", 16"',
-      "Interior Padding": "5mm foam",
-      Weight: "280g",
-      Colors: "Black, Navy, Gray",
-      Warranty: "2 years",
-    },
-    stock: 36,
-    rating: 4.7,
-    reviews: 142,
-  },
-  {
-    id: "19",
-    name: "USB-C Hub",
-    price: 999.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "accessories",
-    description:
-      "Expand your device's connectivity with our versatile USB-C Hub. Featuring multiple ports in a compact design, it's the perfect solution for connecting all your peripherals and accessories.",
-    features: [
-      "7-in-1 port expansion",
-      "4K HDMI output",
-      "SD and microSD card readers",
-      "USB 3.0 ports",
-      "100W Power Delivery",
-      "Aluminum alloy construction",
-    ],
-    specifications: {
-      Ports: "HDMI, 2x USB 3.0, SD, microSD, USB-C PD, Ethernet",
-      "HDMI Output": "4K@30Hz",
-      "Data Transfer": "Up to 5Gbps",
-      "Power Delivery": "100W pass-through",
-      Dimensions: "112 x 28 x 9mm",
-      Compatibility: "MacBook, iPad Pro, Windows laptops, Android",
+      "Marca": "Quest Nutrition",
+      "Formato": "Barra",
+      "Peso": "624 g",
+      "Unidades": "624 g (12 barras)",
+      "Alérgenos": "Puede contener huevo, leche, trigo y soya",
+      "Contenido energético": "150 kcal por porción",
+      "Grasas": "6 g",
+      "Carbohidratos": "23 g",
+      "Proteína": "0 g",
+      "ASIN": "B092CRNT6M"
     },
     stock: 22,
     rating: 4.6,
-    reviews: 156,
+    reviews: 11162,
+    questions: [
+      "¿Cuántas barras vienen por caja?",
+      "¿Realmente no tiene proteína?",
+      "¿Tiene edulcorantes artificiales?",
+      "¿Es apto para personas con intolerancia al gluten?",
+      "¿Se puede consumir como reemplazo de comida ligera?"
+    ]
   },
   {
-    id: "20",
-    name: "Screen Protector",
-    price: 299.99,
-    image: "/placeholder.svg?height=600&width=600",
-    category: "accessories",
+    id: "13",
+    name: "PBfit | Polvo de Crema de Cacahuate Sin Azúcar",
+    price: 269.00, // Ajusta el precio si es necesario
+    image: `${prefix}/images/id13.jpg`, // Cambia la ruta si aplica
+    category: "featured",
     description:
-      "Safeguard your device's screen with our premium Screen Protector. Offering superior scratch resistance and clarity, it preserves your display's pristine condition without affecting touch sensitivity.",
+      "PBfit es una alternativa saludable a la crema de cacahuate tradicional. Con 87% menos grasa y sin azúcar añadida, este polvo de crema de cacahuate es ideal para smoothies, recetas o untar.",
     features: [
-      "9H hardness",
-      "Oleophobic coating",
-      "99% transparency",
-      "Easy installation",
-      "Case-friendly design",
-      "Bubble-free application",
+      "Sin azúcar añadida",
+      "87% menos grasa que la crema de cacahuate tradicional",
+      "Ideal para batidos, repostería o untar",
+      "Formato en polvo para fácil mezcla",
+      "Alto contenido en proteína vegetal"
     ],
     specifications: {
-      Material: "Tempered glass",
-      Thickness: "0.33mm",
-      Hardness: "9H",
-      Compatibility: "Multiple smartphone and tablet models",
-      "Package Includes": "2 screen protectors, cleaning kit, installation guide",
-      Warranty: "Lifetime replacement",
+      "Marca": "PBfit",
+      "Formato": "Polvo",
+      "Tipo de envase": "Botella",
+      "Unidades": "368 g",
+      "Dimensiones del producto": "9 x 15 x 9 cm",
+      "Peso del producto": "368 g",
+      "Modelo": "127976",
+      "ASIN": "B07J1VGWGG"
     },
-    stock: 54,
-    rating: 4.4,
-    reviews: 231,
+    stock: 25,
+    rating: 4.7,
+    reviews: 6080,
+    questions: [
+      "¿Se puede mezclar con agua para hacer crema de cacahuate?",
+      "¿Es apto para dietas keto?",
+      "¿Tiene sabor natural o añadido?",
+      "¿Cuál es su vida útil después de abrirse?",
+      "¿Contiene aditivos o conservadores?"
+    ]
+  },
+  {
+    id: "14",
+    name: "Morama | Mezcla para Hotcakes con Proteína",
+    price: 139.00, // Ajusta según precio real
+    image: `${prefix}/images/id14.jpg`, // Cambia la ruta si aplica
+    category: "featured",
+    description:
+      "Prepara hotcakes saludables con la mezcla de Morama hecha a base de arroz integral, avena y coco. Aporta 13 g de proteína por porción y es ideal para dietas veganas y sin lácteos.",
+    features: [
+      "13 g de proteína por porción",
+      "Hecha con avena, coco y harina de arroz integral",
+      "Apta para dietas veganas",
+      "Sin lácteos ni conservadores",
+      "Origen 100% mexicano"
+    ],
+    specifications: {
+      "Marca": "Morama",
+      "Formato": "Bolsa",
+      "Unidades": "350 g",
+      "Ingredientes": "Avena, Coco, Proteína",
+      "Alérgenos": "Sin lácteos, Frutos secos, Cacahuates",
+      "Dimensiones del producto": "7 x 15.5 x 21 cm",
+      "Peso del producto": "350 g",
+      "Contenido energético": "210 kcal por porción",
+      "Carbohidratos": "29 g (4 g de azúcar)",
+      "Grasas": "4 g",
+      "Proteína": "9 g",
+      "País de origen": "México",
+      "ASIN": "B07HYRLX4J"
+    },
+    stock: 30,
+    rating: 4.5,
+    reviews: 1852,
+    questions: [
+      "¿Necesita huevo o leche para prepararse?",
+      "¿Es libre de gluten?",
+      "¿Cuál es la proporción por hotcake?",
+      "¿Apto para niños?",
+      "¿Puede usarse para waffles?"
+    ]
+  },
+  {
+    id: "15",
+    name: "Catalina Crunch | Cereal Sabor Canela (Cinnamon Toast)",
+    price: 198.00, // Ajusta según precio real
+    image: `${prefix}/images/id15.jpg`, // Cambia la ruta si aplica
+    category: "featured",
+    description:
+      "Disfruta de un desayuno saludable y delicioso con Catalina Crunch sabor canela. Alto en proteína, sin azúcar y apto para dietas keto, es ideal para un estilo de vida activo.",
+    features: [
+      "30 g de proteína por paquete (36 g por porción)",
+      "Sin azúcar añadida",
+      "Apto para dieta keto y diabéticos",
+      "Con edulcorantes naturales (stevia y fruta del monje)",
+      "Libre de alérgenos comunes"
+    ],
+    specifications: {
+      "Marca": "Catalina Crunch",
+      "Formato": "Cereal Inflado",
+      "Unidades": "255 g",
+      "Ingredientes": "Harina de proteína de chícharo, fibra de raíz de achicoria, tapioca, aceite de girasol, saborizantes naturales, estevia, fruta monje",
+      "Alérgenos": "Sin alérgenos",
+      "Contenido energético": "770 kcal por empaque",
+      "Proteína": "30.56 g",
+      "Grasas": "13.89 g",
+      "Carbohidratos": "13.89 g (0 g de azúcar)",
+      "Dimensiones del paquete": "24.3 x 17.9 x 9 cm",
+      "Peso del producto": "255 g",
+      "ASIN": "B07WD631ZX"
+    },
+    stock: 40,
+    rating: 4.1,
+    reviews: 2943,
+    questions: [
+      "¿Este cereal es apto para diabéticos?",
+      "¿Contiene gluten?",
+      "¿Cuántas porciones trae el paquete?",
+      "¿Endulzado naturalmente?",
+      "¿Tiene certificación keto?"
+    ]
+  }
+  ,
+  // Accessories
+  {
+    id: "16",
+    name: "Carnitina Platinum 1300mg | Con CLA, Cetonas de Frambuesa y Vinagre de Manzana",
+    price: 369.00, // Ajusta según precio real
+    image: `${prefix}/images/id16.jpg`, // Cambia la ruta si aplica
+    category: "featured",
+    description:
+      "Carnitina Platinum es un suplemento avanzado diseñado para apoyar la quema de grasa, la energía y el metabolismo. Su fórmula incluye carnitina, CLA, cetonas de frambuesa y vinagre de manzana.",
+    features: [
+      "1300 mg de carnitina por porción",
+      "Contiene vinagre de manzana y CLA",
+      "Incluye cetonas de frambuesa",
+      "Fórmula sin gluten",
+      "Apto para hombres y mujeres"
+    ],
+    specifications: {
+      "Marca": "TESTROL",
+      "Formato": "Cápsula",
+      "Unidades": "90 cápsulas",
+      "Alérgenos": "Sin gluten",
+      "Rango de edad": "Adulto",
+      "ASIN": "B09SDMQCWS"
+    },
+    stock: 38,
+    rating: 4.5,
+    reviews: 933,
+    questions: [
+      "¿Cuántas cápsulas se deben tomar al día?",
+      "¿Es apto para personas con dieta keto?",
+      "¿Tiene efectos secundarios conocidos?",
+      "¿Contiene cafeína?",
+      "¿Se puede combinar con ejercicio cardiovascular?"
+    ]
+  },
+  {
+    id: "17",
+    name: "CLA | Suplemento de Ácido Linoleico Conjugado",
+    price: 329.00, // Ajusta según el precio real si es necesario
+    image: `${prefix}/images/id17.jpg`, // Ajusta la ruta a la imagen correspondiente
+    category: "featured",
+    description:
+      "El CLA es un suplemento popular entre quienes buscan mejorar su composición corporal. Apoya la quema de grasa y la preservación de masa muscular magra en combinación con una dieta adecuada y ejercicio.",
+    features: [
+      "Contiene ácido linoleico conjugado (CLA)",
+      "Formato de gel suave fácil de ingerir",
+      "Sin sabor",
+      "Ideal para adultos activos",
+      "Producto sin necesidad de baterías ni dispositivos especiales"
+    ],
+    specifications: {
+      "Peso del producto": "180 g",
+      "Dimensiones": "6.7 x 6.7 x 13 cm",
+      "Forma del artículo": "Gel suave",
+      "Sabor": "Sin sabor",
+      "Cantidad": "1 unidad",
+      "Etapa de vida": "Adulto",
+      "ASIN": "B0C15D975F"
+    },
+    stock: 40,
+    rating: 4.7,
+    reviews: 135,
+    questions: [
+      "¿Cuántas cápsulas se deben tomar al día?",
+      "¿Se puede tomar junto con otros suplementos?",
+      "¿Tiene algún efecto secundario?",
+      "¿Funciona mejor con ejercicio?",
+      "¿Este producto es apto para veganos?"
+    ]
+  },
+  {
+    id: "18",
+    name: "Carnitina | High Power | 30 Cápsulas",
+    price: 189.00, // Ajusta el precio si lo tienes
+    image: `${prefix}/images/id18.jpg`, // Ajusta el path según tu estructura
+    category: "featured",
+    description:
+      "Suplemento de carnitina en cápsulas de la marca High Power. Diseñado para apoyar el metabolismo de las grasas y mejorar el rendimiento físico durante el ejercicio.",
+    features: [
+      "Contiene L-Carnitina",
+      "Apoya la quema de grasa y el metabolismo energético",
+      "Ideal para uso previo al entrenamiento",
+      "Formato en cápsulas fáciles de ingerir",
+      "Apto para adultos activos"
+    ],
+    specifications: {
+      "Unidades": "30 cápsulas",
+      "Marca": "High Power",
+      "Formato": "Cápsula",
+      "ASIN": "B07CY4Q23B"
+    },
+    stock: 36,
+    rating: 4.6,
+    reviews: 155,
+    questions: [
+      "¿Cuántas cápsulas se deben tomar antes del ejercicio?",
+      "¿Se puede consumir en ayunas?",
+      "¿Tiene efectos secundarios?",
+      "¿Cuánto tiempo tarda en hacer efecto?",
+      "¿Puede combinarse con quemadores de grasa?"
+    ]
+  },
+  {
+    id: "19",
+    name: "Giant Sports 100% Whey Proteína | 924g",
+    price: 849.00, // Ajusta el precio si lo tienes
+    image: `${prefix}/images/id19.jpg`, // Ajusta el path según tu estructura
+    category: "featured",
+    description:
+      "Proteína en polvo de suero de leche 100% pura de Giant Sports International. Ideal para apoyar la recuperación muscular y el desarrollo de masa magra tras el entrenamiento.",
+    features: [
+      "Fórmula con proteína de suero de alta calidad",
+      "Favorece el crecimiento y recuperación muscular",
+      "Sabor delicioso y fácil de mezclar",
+      "Adecuado para atletas y adultos activos",
+      "Formato en polvo de 924 gramos"
+    ],
+    specifications: {
+      "Marca": "Giant Performance",
+      "Formato": "Polvo",
+      "Tipo de envase": "Bote",
+      "Rango de edad adecuado": "Adulto",
+      "Peso": "907 g",
+      "ASIN": "B08NCGQRVC"
+    },
+    stock: 22,
+    rating: 4.8,
+    reviews: 103,
+    questions: [
+      "¿Cuánta proteína contiene por porción?",
+      "¿Es apta para personas con intolerancia a la lactosa?",
+      "¿Se puede mezclar con leche vegetal?",
+      "¿Cuándo es mejor tomarla: antes o después del ejercicio?",
+      "¿Tiene sabores disponibles?"
+    ]
+  },
+  {
+    id: "19",
+    name: "Burn Fit Gel Corporal | Quema Grasa y Anticelulitis",
+    price: 289.00, // Puedes ajustar este valor con el precio real si lo conoces
+    image: `${prefix}/images/id20.jpg`, // Ajusta el path según tu estructura
+    category: "featured",
+    description:
+      "Gel corporal especialmente formulado para ayudar a reducir grasa localizada y combatir la celulitis. Ideal para complementar rutinas de ejercicio y tratamientos reductores.",
+    features: [
+      "Ayuda a reducir grasa localizada",
+      "Combate la celulitis",
+      "Textura ligera de rápida absorción",
+      "Uso tópico en zonas específicas del cuerpo",
+      "Presentación en envase de 330 g"
+    ],
+    specifications: {
+      "Dimensiones del producto": "9 x 9 x 8 cm",
+      "Peso": "330 g",
+      "ASIN": "B083ZMNRD1",
+      "Ranking de ventas Amazon": "N.º 2 en Tonificadores y Moldeadores Corporales",
+      "Fecha de ingreso": "8 abril 2022"
+    },
+    stock: 30,
+    rating: 4.3,
+    reviews: 2331,
+    questions: [
+      "¿Cuántas veces al día se recomienda aplicar?",
+      "¿Funciona sin hacer ejercicio?",
+      "¿Deja sensación pegajosa?",
+      "¿Sirve para brazos y abdomen?",
+      "¿Cuánto tiempo tarda en hacer efecto?"
+    ]
   },
 ]
 
