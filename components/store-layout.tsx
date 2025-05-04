@@ -36,7 +36,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
               Sobre nosotros
               </Link>
               <Link href="/contact" className="hover:text-store-orange transition-colors">
-                Contacto
+              Ayudas
               </Link>
             </nav>
             <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
