@@ -960,7 +960,7 @@ export const productDatabase = [
     
   },
   {
-    id: "19",
+    id: "20",
     name: "Burn Fit Gel Corporal | Quema Grasa y Anticelulitis",
     price: 289.00, // Puedes ajustar este valor con el precio real si lo conoces
     image: `${prefix}/images/id20.jpg`, // Ajusta el path según tu estructura
