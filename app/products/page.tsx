@@ -155,7 +155,7 @@ export default function ProductsPage() {
   return (
     <StoreLayout>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-store-dark-green">All Products</h1>
+        <h1 className="text-3xl font-bold mb-8 text-store-dark-green">Todos los productos</h1>
         <ProductGrid products={allProducts} category="all" />
       </div>
     </StoreLayout>

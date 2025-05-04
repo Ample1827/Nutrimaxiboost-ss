@@ -30,7 +30,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
                 Home
               </Link>
               <Link href="/products" className="hover:text-store-orange transition-colors">
-                Products
+              Productos
               </Link>
               <Link href="/about" className="hover:text-store-orange transition-colors">
               Sobre nosotros
@@ -65,7 +65,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
                 Home
               </Link>
               <Link href="/products" className="text-sm hover:text-store-orange transition-colors">
-                Products
+              Productos
               </Link>
               <Link href="/about" className="text-sm hover:text-store-orange transition-colors">
               Sobre nosotros

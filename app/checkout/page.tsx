@@ -165,10 +165,10 @@ export default function CheckoutPage() {
       <StoreLayout>
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-bold text-store-dark-green">Your cart is empty</h1>
-            <p>Add some products to your cart before checking out.</p>
+            <h1 className="text-3xl font-bold text-store-dark-green">Tu carrito está vacío</h1>
+            <p>Añade algunos productos a tu carrito antes de pagar.</p>
             <Button onClick={() => router.push("/")} className="mt-6 bg-store-orange hover:bg-store-bright-green">
-              Browse Products
+            Explorar productos
             </Button>
           </div>
         </div>
