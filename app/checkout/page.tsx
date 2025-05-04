@@ -339,7 +339,7 @@ export default function CheckoutPage() {
                         </div>
                         <div className="flex items-center space-x-2">
                           <input type="radio" id="payment-cash" name="payment" />
-                          <Label htmlFor="payment-cash">Contra reembolso</Label>
+                          <Label htmlFor="payment-cash">Pago en Efectivo</Label>
                         </div>
                         <div className="flex items-center space-x-2">
                           <input type="radio" id="payment-transfer" name="payment" />

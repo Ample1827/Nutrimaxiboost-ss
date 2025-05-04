@@ -48,7 +48,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
               </SheetTrigger>
               <SheetContent>
                 <SheetHeader>
-                  <SheetTitle>Your Cart</SheetTitle>
+                  <SheetTitle>Carrito de Compras</SheetTitle>
                 </SheetHeader>
                 <Cart
                   onCheckout={() => {

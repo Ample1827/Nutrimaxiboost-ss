@@ -102,11 +102,11 @@ export default function Cart({ onCheckout }: CartProps) {
         </div>
         <Link href="/checkout" passHref>
           <Button className="w-full bg-store-bright-green hover:bg-store-dark-green">
-            Proceed to Checkout
+          Proceder al Pago
           </Button>
         </Link>
         <Button variant="outline" className="w-full" onClick={clearCart}>
-          Clear Cart
+          Eliminar Carrito
         </Button>
       </div>
     </div>
