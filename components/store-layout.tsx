@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
-import { ShoppingCart, Leaf } from "lucide-react"
+import { ShoppingCart, Facebook, Twitter, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { CartProvider } from "@/components/cart-provider"
@@ -21,7 +21,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Link href="/" className="flex items-center gap-2">
-                <Leaf className="h-6 w-6 text-store-bright-green" />
+                <ShoppingCart  className="h-6 w-6 text-store-bright-green" />
                 <span className="font-bold text-xl">Nutrimaxiboost</span>
               </Link>
             </div>
@@ -80,10 +80,25 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
         <footer className="mt-auto border-t py-6 bg-store-dark-green text-white">
           <div className="container mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Leaf className="h-5 w-5 text-store-bright-green" />
+              <ShoppingCart className="h-5 w-5 text-store-bright-green" />
               <span className="font-bold">Nutrimaxiboost</span>
             </div>
-            <p className="text-sm opacity-80">© {new Date().getFullYear()} Nutrimaxiboost. All rights reserved.</p>
+
+            <div className="flex justify-center gap-4 mb-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <Facebook className="h-5 w-5 hover:text-store-bright-green transition-colors" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <Twitter className="h-5 w-5 hover:text-store-bright-green transition-colors" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <Instagram className="h-5 w-5 hover:text-store-bright-green transition-colors" />
+              </a>
+            </div>
+
+            <p className="text-sm opacity-80">
+              © {new Date().getFullYear()} Nutrimaxiboost. All rights reserved.
+            </p>
           </div>
         </footer>
       </div>

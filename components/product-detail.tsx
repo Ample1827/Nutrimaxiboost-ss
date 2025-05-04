@@ -108,22 +108,22 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               disabled={product.stock === 0}
             >
               <ShoppingCart className="mr-2 h-5 w-5" />
-              Add to Cart
+              añadir a la cesta
             </Button>
           </div>
 
           <div className="space-y-3 border-t pt-6">
             <div className="flex items-center">
               <Truck className="h-5 w-5 text-store-bright-green mr-3" />
-              <span>Free shipping on orders over MXN $1,000</span>
+              <span>Envío gratis en pedidos mayores a MXN $1,000</span>
             </div>
             <div className="flex items-center">
               <Shield className="h-5 w-5 text-store-bright-green mr-3" />
-              <span>2-year warranty included</span>
+              <span>Garantía de 2 años incluida</span>
             </div>
             <div className="flex items-center">
               <RefreshCw className="h-5 w-5 text-store-bright-green mr-3" />
-              <span>30-day money-back guarantee</span>
+              <span>garantía de devolución de dinero de 30 días</span>
             </div>
           </div>
         </div>
@@ -131,13 +131,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
       {/* Product Details Tabs */}
       <Tabs defaultValue="features" className="mb-12">
-        <TabsList className="grid grid-cols-3 mb-6">
-          <TabsTrigger value="features">Features</TabsTrigger>
-          <TabsTrigger value="specifications">Specifications</TabsTrigger>
-          <TabsTrigger value="shipping">Shipping & Returns</TabsTrigger>
+        <TabsList className="grid grid-cols-4 mb-6">
+          <TabsTrigger value="features">Características</TabsTrigger>
+          <TabsTrigger value="specifications">Especificaciones del producto</TabsTrigger>
+          <TabsTrigger value="shipping">Envíos y devoluciones</TabsTrigger>
+          <TabsTrigger value="questions">Preguntas frecuentes</TabsTrigger>
         </TabsList>
         <TabsContent value="features" className="bg-white p-6 rounded-lg border">
-          <h3 className="text-xl font-semibold mb-4">Key Features</h3>
+          <h3 className="text-xl font-semibold mb-4">Características clave</h3>
           <ul className="list-disc pl-6 space-y-2">
             {product.features.map((feature, index) => (
               <li key={index}>{feature}</li>
@@ -145,7 +146,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </ul>
         </TabsContent>
         <TabsContent value="specifications" className="bg-white p-6 rounded-lg border">
-          <h3 className="text-xl font-semibold mb-4">Technical Specifications</h3>
+          <h3 className="text-xl font-semibold mb-4">Especificaciones técnicas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {Object.entries(product.specifications).map(([key, value]) => (
               <div key={key} className="border-b pb-2">
@@ -154,24 +155,39 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             ))}
           </div>
         </TabsContent>
+        <TabsContent value="questions" className="bg-white p-6 rounded-lg border">
+          <h3 className="text-xl font-semibold mb-4">Preguntas frecuentes</h3>
+          <ul className="space-y-4">
+            {product.faq && product.faq.length > 0 ? (
+              product.faq.map((item, index) => (
+          <li key={index}>
+            <p className="font-medium">❓ {item.question}</p>
+            <p className="text-gray-700">💬 {item.answer}</p>
+          </li>
+              ))
+            ) : (
+              <li>No hay preguntas registradas para este producto.</li>
+            )}
+          </ul>
+        </TabsContent>
         <TabsContent value="shipping" className="bg-white p-6 rounded-lg border">
-          <h3 className="text-xl font-semibold mb-4">Shipping Information</h3>
+          <h3 className="text-xl font-semibold mb-4">Información de envío</h3>
           <p className="mb-4">
-            We offer free standard shipping on all orders over MXN $1,000. For orders under MXN $1,000, a shipping fee
-            of MXN $150 will be applied.
+          Ofrecemos envío estándar gratuito en todos los pedidos superiores a MXN $1,000.
+           Para pedidos inferiores a MXN $1,000, se aplicará un cargo de envío de MXN $150.
           </p>
           <p className="mb-4">
-            Standard shipping typically takes 3-5 business days. Express shipping is available at checkout for an
-            additional fee.
+          El envío estándar suele tardar entre 3 y 5 días laborables.
+           El envío exprés está disponible al finalizar la compra por un cargo adicional.
           </p>
-          <h3 className="text-xl font-semibold mb-4 mt-6">Return Policy</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-6">Política de devoluciones</h3>
           <p className="mb-4">
-            If you're not completely satisfied with your purchase, you can return it within 30 days for a full refund or
-            exchange.
+          Si no está completamente satisfecho con su compra,
+          puede devolverla dentro de los 30 días para obtener un reembolso completo o un cambio.
           </p>
           <p>
-            Items must be in their original condition and packaging. Please contact our customer service team to
-            initiate a return.
+          Los artículos deben estar en su estado y embalaje originales.
+          Contacta con nuestro equipo de atención al cliente para solicitar una devolución.
           </p>
         </TabsContent>
       </Tabs>

@@ -5,9 +5,9 @@ import "./globals.css";
 import { CartProvider } from "@/hooks/use-cart"; // adjust path if different
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.dev",
+  title: "Nutrimaxiboost",
+  description: "healthy supplements and products",
+  generator: "Adalberto Romero Romero",
 };
 
 export default function RootLayout({

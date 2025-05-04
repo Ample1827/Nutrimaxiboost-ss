@@ -28,7 +28,30 @@ export const productDatabase = [
     },
     stock: 15,
     rating: 4.8,
-    reviews: 124
+    reviews: 124,
+    faq: [
+      {
+        question: "¿Cuál es la mejor hora para tomar esta proteína?",
+        answer: "La mejor hora es después del entrenamiento o por la mañana para aprovechar la absorción rápida."
+      },
+      {
+        question: "¿Este producto contiene lactosa?",
+        answer: "Sí, contiene pequeñas cantidades de lactosa, ya que es suero de leche."
+      },
+      {
+        question: "¿Es apta para personas con intolerancia al gluten?",
+        answer: "Sí, esta proteína no contiene gluten añadido."
+      },
+      {
+        question: "¿Cuántas porciones contiene el envase?",
+        answer: "El envase de 2,27 kg contiene aproximadamente 73 porciones."
+      },
+      {
+        question: "¿Se puede mezclar con agua o leche?",
+        answer: "Sí, se disuelve fácilmente tanto en agua como en leche."
+      }
+    ]
+    
   },
   {
     id: "2",
@@ -52,9 +75,30 @@ export const productDatabase = [
     },
     stock: 23,
     rating: 4.6,
-    reviews: 56
-  }
-  ,
+    reviews: 56,
+    faq: [
+      {
+        question: "¿Cuál es el mejor momento para tomar esta proteína?",
+        answer: "Se recomienda tomarla antes de dormir o entre comidas debido a su digestión lenta."
+      },
+      {
+        question: "¿Contiene gluten?",
+        answer: "No contiene gluten añadido, pero puede haber trazas debido al proceso de fabricación."
+      },
+      {
+        question: "¿Es apta para personas intolerantes a la lactosa?",
+        answer: "Contiene caseína derivada de la leche, por lo que no es adecuada para personas con intolerancia severa a la lactosa."
+      },
+      {
+        question: "¿Cuántas porciones contiene el envase?",
+        answer: "Aproximadamente 53 porciones por envase de 1800 g."
+      },
+      {
+        question: "¿Con qué líquidos se puede mezclar?",
+        answer: "Se puede mezclar con agua o leche; mezclar con leche mejora el sabor y la textura."
+      }
+    ]
+  },
   {
     id: "3",
     name: "Birdman Falcon Performance Proteína Premium",
@@ -81,9 +125,30 @@ export const productDatabase = [
     legal_notice: "Este producto no es un medicamento.",
     stock: 8,
     rating: 4.6,
-    reviews: 1339
-  }
-  ,
+    reviews: 1339,
+    faq: [
+      {
+        question: "¿Esta proteína es apta para personas veganas?",
+        answer: "Sí, está elaborada 100% con ingredientes de origen vegetal."
+      },
+      {
+        question: "¿Contiene lactosa o gluten?",
+        answer: "No, es libre de gluten y lactosa."
+      },
+      {
+        question: "¿Qué tipo de proteínas contiene?",
+        answer: "Contiene proteínas de chícharo, arroz y arándano."
+      },
+      {
+        question: "¿Cuántas porciones rinde el envase?",
+        answer: "Rinde aproximadamente 20 a 25 porciones, dependiendo de la dosis utilizada."
+      },
+      {
+        question: "¿Se puede mezclar con otros líquidos además de agua?",
+        answer: "Sí, puedes mezclarla con leche vegetal, jugos o en licuados para mejorar el sabor."
+      }
+    ]
+  },
   {
     id: "4",
     name: "Birdman Falcon Protein Proteína",
@@ -108,12 +173,27 @@ export const productDatabase = [
     stock: 19,
     rating: 4.7,
     reviews: 3219,
-    questions: [
-      "¿Esta proteína contiene azúcar añadida?",
-      "¿Es adecuada para personas con enfermedad celíaca?",
-      "¿Cuántos gramos de proteína hay por porción?",
-      "¿Contiene soya o alérgenos comunes?",
-      "¿Cuál es el origen de sus ingredientes?"
+    faq: [
+      {
+        question: "¿Esta proteína contiene azúcar añadida?",
+        answer: "No, esta proteína no contiene azúcar añadida. Su sabor proviene de ingredientes naturales."
+      },
+      {
+        question: "¿Es adecuada para personas con enfermedad celíaca?",
+        answer: "Sí, es completamente libre de gluten y apta para personas con enfermedad celíaca."
+      },
+      {
+        question: "¿Cuántos gramos de proteína hay por porción?",
+        answer: "Cada porción contiene aproximadamente 21 gramos de proteína vegetal."
+      },
+      {
+        question: "¿Contiene soya o alérgenos comunes?",
+        answer: "No, está formulada sin soya ni otros alérgenos comunes."
+      },
+      {
+        question: "¿Cuál es el origen de sus ingredientes?",
+        answer: "Sus ingredientes provienen de fuentes vegetales como el chícharo, arroz y otros cultivos sostenibles."
+      }
     ]
   },
   {
@@ -140,12 +220,27 @@ export const productDatabase = [
     stock: 27,
     rating: 4.6,
     reviews: 455,
-    questions: [
-      "¿Esta proteína contiene lactosa o derivados lácteos?",
-      "¿Cuántas porciones contiene el envase?",
-      "¿Se puede mezclar con leche vegetal?",
-      "¿Es apta para personas intolerantes a la lactosa?",
-      "¿Cuál es el contenido de creatina por porción?"
+    faq: [
+      {
+        question: "¿Esta proteína contiene lactosa o derivados lácteos?",
+        answer: "No, esta proteína es 100% vegana y no contiene lactosa ni derivados lácteos."
+      },
+      {
+        question: "¿Cuántas porciones contiene el envase?",
+        answer: "El envase contiene aproximadamente 20 a 24 porciones, dependiendo de la cantidad usada por toma."
+      },
+      {
+        question: "¿Se puede mezclar con leche vegetal?",
+        answer: "Sí, se puede mezclar perfectamente con cualquier leche vegetal como almendra, avena o coco."
+      },
+      {
+        question: "¿Es apta para personas intolerantes a la lactosa?",
+        answer: "Sí, al no contener derivados lácteos es ideal para personas con intolerancia a la lactosa."
+      },
+      {
+        question: "¿Cuál es el contenido de creatina por porción?",
+        answer: "Contiene aproximadamente 2 gramos de creatina Creapure® por porción."
+      }
     ]
   }
   ,
@@ -153,8 +248,8 @@ export const productDatabase = [
   {
     id: "6",
     name: "Omega 3 - B Life Company (90 Capletas)",
-    price: 499.00, // Update if you have a specific price
-    image: `${prefix}/images/id6.jpg`, // Update path if needed
+    price: 499.00,
+    image: `${prefix}/images/id6.jpg`,
     category: "featured",
     description:
       "Complemento alimenticio con Omega 3 en formato de capletas. Ideal para apoyar la salud cardiovascular, cerebral y articular en adultos.",
@@ -175,12 +270,27 @@ export const productDatabase = [
     stock: 12,
     rating: 4.7,
     reviews: 2950,
-    questions: [
-      "¿Cuántas capletas se deben tomar al día?",
-      "¿Contiene algún alérgeno como soya o gluten?",
-      "¿Cuál es el contenido de EPA y DHA por dosis?",
-      "¿Es de origen vegetal o marino?",
-      "¿Tiene sabor o es fácil de tragar?"
+    faq: [
+      {
+        question: "¿Cuántas capletas se deben tomar al día?",
+        answer: "Se recomienda tomar 1 a 2 capletas al día, preferentemente con alimentos."
+      },
+      {
+        question: "¿Contiene algún alérgeno como soya o gluten?",
+        answer: "No, el producto está libre de alérgenos comunes como soya, gluten y lácteos."
+      },
+      {
+        question: "¿Cuál es el contenido de EPA y DHA por dosis?",
+        answer: "Cada dosis contiene aproximadamente 180 mg de EPA y 120 mg de DHA."
+      },
+      {
+        question: "¿Es de origen vegetal o marino?",
+        answer: "Este Omega 3 es de origen marino, proveniente de aceite de pescado purificado."
+      },
+      {
+        question: "¿Tiene sabor o es fácil de tragar?",
+        answer: "Las capletas no tienen sabor fuerte y están diseñadas para facilitar su consumo."
+      }
     ]
   },
   {
@@ -208,13 +318,29 @@ export const productDatabase = [
     stock: 16,
     rating: 4.7,
     reviews: 145,
-    questions: [
-      "¿Cuántas cápsulas se recomienda tomar al día?",
-      "¿Es apto para personas con diabetes?",
-      "¿Tiene contraindicaciones si se toma por periodos prolongados?",
-      "¿Es de origen natural o contiene aditivos?",
-      "¿Cuál es el porcentaje de vitamina C por dosis?"
+    faq: [
+      {
+        question: "¿Cuántas cápsulas se recomienda tomar al día?",
+        answer: "Se recomienda tomar 1 a 2 cápsulas al día, preferentemente con alimentos."
+      },
+      {
+        question: "¿Es apto para personas con diabetes?",
+        answer: "Sí, el producto es apto para personas con diabetes, pero se recomienda consultar con su médico antes de iniciar cualquier suplemento."
+      },
+      {
+        question: "¿Tiene contraindicaciones si se toma por periodos prolongados?",
+        answer: "No se conocen contraindicaciones importantes, pero su uso prolongado debe ser supervisado por un profesional de la salud."
+      },
+      {
+        question: "¿Es de origen natural o contiene aditivos?",
+        answer: "El producto es de origen natural y está formulado sin aditivos artificiales."
+      },
+      {
+        question: "¿Cuál es el porcentaje de vitamina C por dosis?",
+        answer: "Cada dosis contiene el 100% de la ingesta diaria recomendada de vitamina C."
+      }
     ]
+    
   },
   {
     id: "8",
@@ -240,13 +366,28 @@ export const productDatabase = [
     stock: 10,
     rating: 4.6,
     reviews: 17,
-    questions: [
-      "¿Se puede tomar junto con otros suplementos?",
-      "¿Cuánto tiempo se recomienda tomarlo para notar resultados?",
-      "¿Tiene efectos secundarios reportados?",
-      "¿Es apto para personas mayores?",
-      "¿Se puede consumir con el estómago vacío?"
-    ]
+    faq: [
+      {
+        question: "¿Se puede tomar junto con otros suplementos?",
+        answer: "Sí, se puede tomar junto con otros suplementos, aunque se recomienda consultar con un profesional de la salud para evitar posibles interacciones."
+      },
+      {
+        question: "¿Cuánto tiempo se recomienda tomarlo para notar resultados?",
+        answer: "Los resultados pueden variar, pero generalmente se notan después de 3 a 4 semanas de uso continuo."
+      },
+      {
+        question: "¿Tiene efectos secundarios reportados?",
+        answer: "El producto es bien tolerado, pero en casos aislados puede causar molestias digestivas leves."
+      },
+      {
+        question: "¿Es apto para personas mayores?",
+        answer: "Sí, es apto para personas mayores y puede ser beneficioso como parte de una dieta equilibrada."
+      },
+      {
+        question: "¿Se puede consumir con el estómago vacío?",
+        answer: "Se recomienda consumirlo con alimentos para mejorar su absorción y evitar molestias estomacales."
+      }
+    ]    
   },
   {
     id: "9",
@@ -273,13 +414,29 @@ export const productDatabase = [
     stock: 18,
     rating: 4.6,
     reviews: 5417,
-    questions: [
-      "¿Cuántas cápsulas se deben tomar al día?",
-      "¿Contiene hierro o es libre de este mineral?",
-      "¿Puede ser consumido por adolescentes?",
-      "¿Es apto para personas con presión alta?",
-      "¿Tiene sabor o es neutro?"
+    faq: [
+      {
+        question: "¿Cuántas cápsulas se deben tomar al día?",
+        answer: "Se recomienda tomar de 1 a 2 cápsulas al día, preferiblemente con alimentos."
+      },
+      {
+        question: "¿Contiene hierro o es libre de este mineral?",
+        answer: "Este producto es libre de hierro, ideal para quienes necesitan evitar este mineral."
+      },
+      {
+        question: "¿Puede ser consumido por adolescentes?",
+        answer: "Sí, puede ser consumido por adolescentes, pero se recomienda la supervisión de un profesional de la salud."
+      },
+      {
+        question: "¿Es apto para personas con presión alta?",
+        answer: "Sí, es apto para personas con presión alta, aunque se aconseja consultar con un médico antes de iniciar cualquier suplemento."
+      },
+      {
+        question: "¿Tiene sabor o es neutro?",
+        answer: "El producto tiene un sabor neutro y está diseñado para facilitar su consumo sin causar molestias."
+      }
     ]
+    
   },
   {
     id: "10",
@@ -305,13 +462,29 @@ export const productDatabase = [
     stock: 25,
     rating: 4.7,
     reviews: 1902,
-    questions: [
-      "¿Cuál es la dosis diaria recomendada?",
-      "¿Contiene algún ingrediente adicional?",
-      "¿Se puede tomar en ayunas?",
-      "¿Es apto para mujeres embarazadas?",
-      "¿Tiene efectos secundarios?"
+    faq: [
+      {
+        question: "¿Cuál es la dosis diaria recomendada?",
+        answer: "La dosis diaria recomendada es de 1 a 2 cápsulas al día, según las necesidades individuales y recomendación médica."
+      },
+      {
+        question: "¿Contiene algún ingrediente adicional?",
+        answer: "Sí, además del ingrediente principal, contiene excipientes naturales que ayudan a su conservación y absorción."
+      },
+      {
+        question: "¿Se puede tomar en ayunas?",
+        answer: "Se puede tomar en ayunas, aunque se recomienda consumirlo con alimentos para una mejor tolerancia digestiva."
+      },
+      {
+        question: "¿Es apto para mujeres embarazadas?",
+        answer: "Las mujeres embarazadas deben consultar con su médico antes de tomar este suplemento."
+      },
+      {
+        question: "¿Tiene efectos secundarios?",
+        answer: "No se han reportado efectos secundarios graves, aunque algunas personas pueden experimentar leves molestias digestivas."
+      }
     ]
+    
   },
   // Home & Living
   {
@@ -342,13 +515,29 @@ export const productDatabase = [
     stock: 34,
     rating: 4.4,
     reviews: 211,
-    questions: [
-      "¿Cuántas barras contiene cada caja?",
-      "¿Es apto para dietas keto?",
-      "¿Contiene lactosa?",
-      "¿Tiene certificación libre de gluten?",
-      "¿Es adecuada como post-entrenamiento?"
+    faq: [
+      {
+        question: "¿Cuántas barras contiene cada caja?",
+        answer: "Cada caja contiene 12 barras individuales."
+      },
+      {
+        question: "¿Es apto para dietas keto?",
+        answer: "Sí, es apto para dietas keto gracias a su bajo contenido en carbohidratos y alto en grasas saludables."
+      },
+      {
+        question: "¿Contiene lactosa?",
+        answer: "No, el producto está formulado sin lactosa."
+      },
+      {
+        question: "¿Tiene certificación libre de gluten?",
+        answer: "Sí, cuenta con certificación libre de gluten para personas con sensibilidad o intolerancia."
+      },
+      {
+        question: "¿Es adecuada como post-entrenamiento?",
+        answer: "Sí, es una excelente opción para después del entrenamiento gracias a su contenido en proteínas y nutrientes clave."
+      }
     ]
+    
   },
   {
     id: "12",
@@ -380,13 +569,29 @@ export const productDatabase = [
     stock: 22,
     rating: 4.6,
     reviews: 11162,
-    questions: [
-      "¿Cuántas barras vienen por caja?",
-      "¿Realmente no tiene proteína?",
-      "¿Tiene edulcorantes artificiales?",
-      "¿Es apto para personas con intolerancia al gluten?",
-      "¿Se puede consumir como reemplazo de comida ligera?"
+    faq: [
+      {
+        question: "¿Cuántas barras vienen por caja?",
+        answer: "Cada caja contiene 12 barras, listas para consumir en cualquier momento."
+      },
+      {
+        question: "¿Realmente no tiene proteína?",
+        answer: "Tiene una cantidad baja de proteína, ya que está enfocada en ser una barra energética y no proteica."
+      },
+      {
+        question: "¿Tiene edulcorantes artificiales?",
+        answer: "No, el producto está endulzado con ingredientes naturales y no contiene edulcorantes artificiales."
+      },
+      {
+        question: "¿Es apto para personas con intolerancia al gluten?",
+        answer: "Sí, es apto para personas con intolerancia al gluten y está elaborado con ingredientes certificados sin gluten."
+      },
+      {
+        question: "¿Se puede consumir como reemplazo de comida ligera?",
+        answer: "Sí, puede consumirse como una comida ligera, especialmente en momentos de prisa o después de actividad física moderada."
+      }
     ]
+    
   },
   {
     id: "13",
@@ -416,13 +621,29 @@ export const productDatabase = [
     stock: 25,
     rating: 4.7,
     reviews: 6080,
-    questions: [
-      "¿Se puede mezclar con agua para hacer crema de cacahuate?",
-      "¿Es apto para dietas keto?",
-      "¿Tiene sabor natural o añadido?",
-      "¿Cuál es su vida útil después de abrirse?",
-      "¿Contiene aditivos o conservadores?"
+    faq: [
+      {
+        question: "¿Se puede mezclar con agua para hacer crema de cacahuate?",
+        answer: "Sí, se puede mezclar con agua hasta obtener la consistencia deseada para hacer una crema de cacahuate natural."
+      },
+      {
+        question: "¿Es apto para dietas keto?",
+        answer: "Sí, es apto para dietas keto por su bajo contenido de carbohidratos y alto contenido de grasas saludables."
+      },
+      {
+        question: "¿Tiene sabor natural o añadido?",
+        answer: "Tiene un sabor 100% natural, sin saborizantes añadidos."
+      },
+      {
+        question: "¿Cuál es su vida útil después de abrirse?",
+        answer: "Después de abrirse, se recomienda consumirlo en un plazo de 30 días y mantenerlo bien cerrado en un lugar fresco y seco."
+      },
+      {
+        question: "¿Contiene aditivos o conservadores?",
+        answer: "No, el producto no contiene aditivos ni conservadores artificiales."
+      }
     ]
+    
   },
   {
     id: "14",
@@ -457,13 +678,29 @@ export const productDatabase = [
     stock: 30,
     rating: 4.5,
     reviews: 1852,
-    questions: [
-      "¿Necesita huevo o leche para prepararse?",
-      "¿Es libre de gluten?",
-      "¿Cuál es la proporción por hotcake?",
-      "¿Apto para niños?",
-      "¿Puede usarse para waffles?"
+    faq: [
+      {
+        question: "¿Necesita huevo o leche para prepararse?",
+        answer: "No es necesario, pero puedes agregar huevo o leche para mejorar la textura y el sabor si lo deseas."
+      },
+      {
+        question: "¿Es libre de gluten?",
+        answer: "Sí, la mezcla es completamente libre de gluten."
+      },
+      {
+        question: "¿Cuál es la proporción por hotcake?",
+        answer: "Se recomienda usar aproximadamente 1/4 de taza de mezcla por hotcake."
+      },
+      {
+        question: "¿Apto para niños?",
+        answer: "Sí, es apto para niños y una excelente opción para un desayuno nutritivo."
+      },
+      {
+        question: "¿Puede usarse para waffles?",
+        answer: "Sí, la mezcla también puede utilizarse para preparar waffles con excelentes resultados."
+      }
     ]
+    
   },
   {
     id: "15",
@@ -497,13 +734,29 @@ export const productDatabase = [
     stock: 40,
     rating: 4.1,
     reviews: 2943,
-    questions: [
-      "¿Este cereal es apto para diabéticos?",
-      "¿Contiene gluten?",
-      "¿Cuántas porciones trae el paquete?",
-      "¿Endulzado naturalmente?",
-      "¿Tiene certificación keto?"
+    faq: [
+      {
+        question: "¿Este cereal es apto para diabéticos?",
+        answer: "Sí, es apto para diabéticos ya que no contiene azúcares añadidos y tiene un bajo índice glucémico. Se recomienda consultar con su médico antes de consumirlo."
+      },
+      {
+        question: "¿Contiene gluten?",
+        answer: "No, este cereal está elaborado sin gluten y es seguro para personas con intolerancia o sensibilidad al gluten."
+      },
+      {
+        question: "¿Cuántas porciones trae el paquete?",
+        answer: "Cada paquete contiene aproximadamente 8 porciones, dependiendo del tamaño de la ración."
+      },
+      {
+        question: "¿Endulzado naturalmente?",
+        answer: "Sí, está endulzado con ingredientes naturales como stevia o fruta del monje, sin edulcorantes artificiales."
+      },
+      {
+        question: "¿Tiene certificación keto?",
+        answer: "Sí, cuenta con certificación keto, lo que garantiza que cumple con los estándares de esta dieta."
+      }
     ]
+    
   }
   ,
   // Accessories
@@ -533,13 +786,29 @@ export const productDatabase = [
     stock: 38,
     rating: 4.5,
     reviews: 933,
-    questions: [
-      "¿Cuántas cápsulas se deben tomar al día?",
-      "¿Es apto para personas con dieta keto?",
-      "¿Tiene efectos secundarios conocidos?",
-      "¿Contiene cafeína?",
-      "¿Se puede combinar con ejercicio cardiovascular?"
+    faq: [
+      {
+        question: "¿Cuántas cápsulas se deben tomar al día?",
+        answer: "Se recomienda tomar 1 a 2 cápsulas al día, preferentemente con las comidas."
+      },
+      {
+        question: "¿Es apto para personas con dieta keto?",
+        answer: "Sí, es apto para personas con dieta keto debido a su bajo contenido de carbohidratos y alto contenido de grasas saludables."
+      },
+      {
+        question: "¿Tiene efectos secundarios conocidos?",
+        answer: "No se han reportado efectos secundarios graves, aunque algunas personas pueden experimentar leves molestias digestivas."
+      },
+      {
+        question: "¿Contiene cafeína?",
+        answer: "No, este producto no contiene cafeína."
+      },
+      {
+        question: "¿Se puede combinar con ejercicio cardiovascular?",
+        answer: "Sí, puede combinarse perfectamente con ejercicio cardiovascular para optimizar los resultados de energía y rendimiento."
+      }
     ]
+    
   },
   {
     id: "17",
@@ -568,13 +837,29 @@ export const productDatabase = [
     stock: 40,
     rating: 4.7,
     reviews: 135,
-    questions: [
-      "¿Cuántas cápsulas se deben tomar al día?",
-      "¿Se puede tomar junto con otros suplementos?",
-      "¿Tiene algún efecto secundario?",
-      "¿Funciona mejor con ejercicio?",
-      "¿Este producto es apto para veganos?"
+    faq: [
+      {
+        question: "¿Cuántas cápsulas se deben tomar al día?",
+        answer: "Se recomienda tomar 1 a 2 cápsulas al día, dependiendo de las indicaciones del producto o del profesional de salud."
+      },
+      {
+        question: "¿Se puede tomar junto con otros suplementos?",
+        answer: "Sí, se puede tomar junto con otros suplementos, pero es recomendable consultar con un profesional para evitar posibles interacciones."
+      },
+      {
+        question: "¿Tiene algún efecto secundario?",
+        answer: "En general, el producto es bien tolerado, pero algunas personas pueden experimentar leves molestias digestivas."
+      },
+      {
+        question: "¿Funciona mejor con ejercicio?",
+        answer: "Sí, el producto puede mejorar su efectividad cuando se combina con una rutina de ejercicio regular."
+      },
+      {
+        question: "¿Este producto es apto para veganos?",
+        answer: "Sí, este producto es completamente apto para veganos y no contiene ingredientes de origen animal."
+      }
     ]
+    
   },
   {
     id: "18",
@@ -600,13 +885,29 @@ export const productDatabase = [
     stock: 36,
     rating: 4.6,
     reviews: 155,
-    questions: [
-      "¿Cuántas cápsulas se deben tomar antes del ejercicio?",
-      "¿Se puede consumir en ayunas?",
-      "¿Tiene efectos secundarios?",
-      "¿Cuánto tiempo tarda en hacer efecto?",
-      "¿Puede combinarse con quemadores de grasa?"
+    faq: [
+      {
+        question: "¿Cuántas cápsulas se deben tomar antes del ejercicio?",
+        answer: "Se recomienda tomar 1 cápsula aproximadamente 30 minutos antes del ejercicio para obtener mejores resultados."
+      },
+      {
+        question: "¿Se puede consumir en ayunas?",
+        answer: "Sí, se puede consumir en ayunas, pero si experimentas molestias estomacales, es recomendable tomarlo con algo de comida."
+      },
+      {
+        question: "¿Tiene efectos secundarios?",
+        answer: "En general, no se han reportado efectos secundarios graves, pero algunas personas pueden experimentar ligeras molestias estomacales."
+      },
+      {
+        question: "¿Cuánto tiempo tarda en hacer efecto?",
+        answer: "El efecto puede comenzar a sentirse en un plazo de 30 minutos a 1 hora, dependiendo de la persona y el tipo de ejercicio realizado."
+      },
+      {
+        question: "¿Puede combinarse con quemadores de grasa?",
+        answer: "Sí, puede combinarse con quemadores de grasa, pero siempre es recomendable consultar con un profesional de la salud antes de combinar suplementos."
+      }
     ]
+    
   },
   {
     id: "19",
@@ -634,13 +935,29 @@ export const productDatabase = [
     stock: 22,
     rating: 4.8,
     reviews: 103,
-    questions: [
-      "¿Cuánta proteína contiene por porción?",
-      "¿Es apta para personas con intolerancia a la lactosa?",
-      "¿Se puede mezclar con leche vegetal?",
-      "¿Cuándo es mejor tomarla: antes o después del ejercicio?",
-      "¿Tiene sabores disponibles?"
+    faq: [
+      {
+        question: "¿Cuánta proteína contiene por porción?",
+        answer: "Cada porción contiene 20 gramos de proteína de alta calidad."
+      },
+      {
+        question: "¿Es apta para personas con intolerancia a la lactosa?",
+        answer: "Sí, este producto es libre de lactosa y apto para personas con intolerancia a la lactosa."
+      },
+      {
+        question: "¿Se puede mezclar con leche vegetal?",
+        answer: "Sí, se puede mezclar perfectamente con leche vegetal, como la de almendra, soja o avena."
+      },
+      {
+        question: "¿Cuándo es mejor tomarla: antes o después del ejercicio?",
+        answer: "Se recomienda tomarla después del ejercicio para apoyar la recuperación muscular, aunque también puede tomarse antes dependiendo de tus objetivos."
+      },
+      {
+        question: "¿Tiene sabores disponibles?",
+        answer: "Sí, está disponible en varios sabores, como chocolate, vainilla y fresa."
+      }
     ]
+    
   },
   {
     id: "19",
@@ -667,13 +984,29 @@ export const productDatabase = [
     stock: 30,
     rating: 4.3,
     reviews: 2331,
-    questions: [
-      "¿Cuántas veces al día se recomienda aplicar?",
-      "¿Funciona sin hacer ejercicio?",
-      "¿Deja sensación pegajosa?",
-      "¿Sirve para brazos y abdomen?",
-      "¿Cuánto tiempo tarda en hacer efecto?"
+    faq: [
+      {
+        question: "¿Cuántas veces al día se recomienda aplicar?",
+        answer: "Se recomienda aplicar el producto 1 a 2 veces al día, dependiendo de las indicaciones del producto."
+      },
+      {
+        question: "¿Funciona sin hacer ejercicio?",
+        answer: "Sí, el producto puede ayudar a mejorar la apariencia de la piel sin ejercicio, pero combinarlo con una rutina de ejercicio puede optimizar los resultados."
+      },
+      {
+        question: "¿Deja sensación pegajosa?",
+        answer: "No, el producto se absorbe rápidamente y no deja sensación pegajosa."
+      },
+      {
+        question: "¿Sirve para brazos y abdomen?",
+        answer: "Sí, es efectivo para aplicar en diferentes áreas del cuerpo, incluyendo brazos y abdomen."
+      },
+      {
+        question: "¿Cuánto tiempo tarda en hacer efecto?",
+        answer: "El tiempo para notar resultados puede variar, pero generalmente se empieza a ver una mejora en la piel después de 2 a 4 semanas de uso constante."
+      }
     ]
+    
   },
 ]
 

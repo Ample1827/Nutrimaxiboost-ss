@@ -35,9 +35,11 @@ export default function Cart({ onCheckout }: CartProps) {
       <div className="flex flex-col items-center justify-center h-[50vh]">
         <ShoppingBag className="h-12 w-12 text-muted-foreground mb-4" />
         <p className="text-muted-foreground mb-4">Your cart is empty</p>
-        <Button variant="outline" onClick={onCheckout}>
-          Continue Shopping
-        </Button>
+        <Link href="/" passHref>
+          <Button variant="outline">
+            Continue Shopping
+          </Button>
+        </Link>
       </div>
     )
   }
@@ -98,8 +100,8 @@ export default function Cart({ onCheckout }: CartProps) {
           <span>Total</span>
           <span className="text-store-dark-green">MXN ${totalPrice.toFixed(2)}</span>
         </div>
-        <Link href="/checkout" className="block w-full">
-          <Button className="w-full bg-store-bright-green hover:bg-store-dark-green" onClick={handleCheckout}>
+        <Link href="/checkout" passHref>
+          <Button className="w-full bg-store-bright-green hover:bg-store-dark-green">
             Proceed to Checkout
           </Button>
         </Link>
