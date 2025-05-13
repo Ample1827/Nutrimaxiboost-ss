@@ -4,9 +4,21 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
-import { ShoppingCart, Facebook, Twitter, Instagram } from "lucide-react"
+import {
+  ShoppingCart,
+  Facebook,
+  Twitter,
+  Instagram,
+  Link2, // Replaces Pinterest
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import { CartProvider } from "@/components/cart-provider"
 import Cart from "@/components/cart"
 import { useCart } from "@/hooks/use-cart"
@@ -21,7 +33,7 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Link href="/" className="flex items-center gap-2">
-                <ShoppingCart  className="h-6 w-6 text-store-bright-green" />
+                <ShoppingCart className="h-6 w-6 text-store-bright-green" />
                 <span className="font-bold text-xl">Nutrimaxiboost</span>
               </Link>
             </div>
@@ -30,13 +42,13 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
                 Home
               </Link>
               <Link href="/products" className="hover:text-store-orange transition-colors">
-              Productos
+                Productos
               </Link>
               <Link href="/about" className="hover:text-store-orange transition-colors">
-              Sobre nosotros
+                Sobre nosotros
               </Link>
               <Link href="/contact" className="hover:text-store-orange transition-colors">
-              Ayudas
+                Ayudas
               </Link>
             </nav>
             <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
@@ -65,10 +77,10 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
                 Home
               </Link>
               <Link href="/products" className="text-sm hover:text-store-orange transition-colors">
-              Productos
+                Productos
               </Link>
               <Link href="/about" className="text-sm hover:text-store-orange transition-colors">
-              Sobre nosotros
+                Sobre nosotros
               </Link>
               <Link href="/contact" className="text-sm hover:text-store-orange transition-colors">
                 Contact
@@ -85,14 +97,14 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
             </div>
 
             <div className="flex justify-center gap-4 mb-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <Facebook className="h-5 w-5 hover:text-store-bright-green transition-colors" />
+              <a href="https://www.facebook.com/share/1NoSRSvZA5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-5 w-5 hover:text-store-bright-green transition-colors" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <Twitter className="h-5 w-5 hover:text-store-bright-green transition-colors" />
+              <a href="https://www.pinterest.com/Nutrimaxiboost/" target="_blank" rel="noopener noreferrer">
+                <Link2 className="h-5 w-5 hover:text-store-bright-green transition-colors" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-          <Instagram className="h-5 w-5 hover:text-store-bright-green transition-colors" />
+              <a href="https://www.instagram.com/nutrimaxiboost/" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-5 w-5 hover:text-store-bright-green transition-colors" />
               </a>
             </div>
 
